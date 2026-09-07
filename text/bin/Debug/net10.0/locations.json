@@ -2,7 +2,7 @@
   {
     "Name": "Torget",
     "Descriptions": [
-      "Du går ut på torget och ser den stora Adolf Kirk Fontänen",
+      "Du går ut på torget och ser den stora Adolf Kirk statyn",
       "Den visar Adolf Kirk som strider mot [insert text]"
     ],
     "PossibleNextLocations": [
@@ -27,12 +27,12 @@
   {
     "Name": "båt",
     "Descriptions": [
-      "Just nu båtarjag ner informationen",
+      "Just nu båtar jag ner informationen",
       "okej nu räcker det"
     ],
     "PossibleNextLocations": [
       "Sewers",
-      "torget"
+      "Torget"
     ],
     "Enemies": [
       "mikael ordin"

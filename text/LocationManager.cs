@@ -10,7 +10,7 @@ class LocationManager
         foreach (string text in location.Descriptions)
         {
             System.Console.WriteLine(text);
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
         //hända figth
@@ -18,10 +18,9 @@ class LocationManager
         System.Console.WriteLine("välj vart du vill gå");
         System.Console.WriteLine(S.ListToString(location.PossibleNextLocations));
 
-        int svar = S.GetIntFromConsole(1, location.PossibleNextLocations.Count + 1);
-
-        Location nextLocation = locationsOfAdolfKirkKöping[location.PossibleNextLocations[svar - 1]];
-        currentLocation = nextLocation;
+        //längsta kodraden!!!!!!!11
+        currentLocation = locationsOfAdolfKirkKöping[location.PossibleNextLocations[S.GetIntFromConsole(1, location.PossibleNextLocations.Count) - 1]];
+        //den basically tar int från konsolen och sedan plockar det indexet från string listan och tar den locationen som matchar
     }
 
 

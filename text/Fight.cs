@@ -15,10 +15,10 @@ class Fight
     bool AttackTarget(FigthableEntity attcker, FigthableEntity target)
     {
         attcker.Attack(target);
-        Console.WriteLine(attcker.name + " attacked " + target.name + " for " + attcker.attack + " damage");
+        Console.WriteLine(attcker.Name + " attacked " + target.Name + " for " + attcker.Attack + " damage");
         if (target.Hp <= 0)
         {
-            System.Console.WriteLine(target.name + " was kirked out");
+            System.Console.WriteLine(target.Name + " was kirked out");
             return true;
         }
         else return false;
@@ -26,14 +26,14 @@ class Fight
 
     void PrintHp(FigthableEntity player, FigthableEntity opponent)
     {
-        System.Console.WriteLine(player.name + " has " + player.Hp + " health left");
-        System.Console.WriteLine(opponent.name + " has " + opponent.Hp + " health left");
+        System.Console.WriteLine(player.Name + " has " + player.Hp + " health left");
+        System.Console.WriteLine(opponent.Name + " has " + opponent.Hp + " health left");
 
     }
 
     void StartFight(FigthableEntity player, FigthableEntity opponent)
     {
-        System.Console.WriteLine(opponent.name + " kirkade fram ur skuggorna");
+        System.Console.WriteLine(opponent.Name + " kirkade fram ur skuggorna");
     }
 
     void RunFight(FigthableEntity player, FigthableEntity opponent)
@@ -47,7 +47,7 @@ class Fight
             else if (AttackTarget(player, opponent)) Winner = player;
             else; 
         }
-        System.Console.WriteLine("the winner is " + Winner.name);
+        System.Console.WriteLine("the winner is " + Winner.Name);
     }
 
     public void ExecuteFight()

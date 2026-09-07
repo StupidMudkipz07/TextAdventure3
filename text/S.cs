@@ -2,8 +2,6 @@ global using System.Text.Json;
 
 static class S
 {
-
-
     public static string ListToString(List<string> list)
     {
         string output = "";
