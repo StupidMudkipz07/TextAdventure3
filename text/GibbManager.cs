@@ -3,13 +3,13 @@ global using System.Text.Json;
 static class S
 {
 
-    
+
     public static string ListToString(List<string> list)
     {
         string output = "";
         for (int i = 0; i < list.Count; i++)
         {
-            output += "\n   " + list[i];
+            output += "\n   " + (i+1) + ": " + list[i];
         }
         if (output == "") return "empty list";
         else return output;

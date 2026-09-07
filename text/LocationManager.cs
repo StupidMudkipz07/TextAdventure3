@@ -13,12 +13,21 @@ class LocationManager
             Console.ReadLine();
         }
 
-        
+        //hända figth
+
+        System.Console.WriteLine("välj vart du vill gå");
+        System.Console.WriteLine(S.ListToString(location.PossibleNextLocations));
+
+        int svar = S.GetIntFromConsole(1, location.PossibleNextLocations.Count + 1);
+
+        Location nextLocation = locationsOfAdolfKirkKöping[location.PossibleNextLocations[svar - 1]];
+        currentLocation = nextLocation;
     }
+
 
     public void PlayRealGAMEOMMG()
     {
-        while(true) PlayLocation(currentLocation);
+        while (true) PlayLocation(currentLocation);
     }
 
     // load locations to a list

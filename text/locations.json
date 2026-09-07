@@ -6,8 +6,8 @@
       "Den visar Adolf Kirk som strider mot [insert text]"
     ],
     "PossibleNextLocations": [
-      "Village",
-      "Cave"
+      "Sewers",
+      "båt"
     ],
     "Enemies": [
       "Wolf",
@@ -15,13 +15,27 @@
     ]
   },
   {
-    "Name": "Village",
+    "Name": "Sewers",
     "Descriptions": [
       "Just nu kirkar jag ner informationen"
     ],
     "PossibleNextLocations": [
-      "Dark Forest"
+      "båt"
     ],
     "Enemies": []
+  },
+  {
+    "Name": "båt",
+    "Descriptions": [
+      "Just nu båtarjag ner informationen",
+      "okej nu räcker det"
+    ],
+    "PossibleNextLocations": [
+      "Sewers",
+      "torget"
+    ],
+    "Enemies": [
+      "mikael ordin"
+    ]
   }
 ]
