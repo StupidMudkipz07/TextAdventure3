@@ -1,0 +1,27 @@
+[
+  {
+    "Name": "Torget",
+    "Descriptions": [
+      "Du går ut på torget och ser den stora Adolf Kirk Fontänen",
+      "Den visar Adolf Kirk som strider mot [insert text]"
+    ],
+    "PossibleNextLocations": [
+      "Village",
+      "Cave"
+    ],
+    "Enemies": [
+      "Wolf",
+      "Goblin"
+    ]
+  },
+  {
+    "Name": "Village",
+    "Descriptions": [
+      "Just nu kirkar jag ner informationen"
+    ],
+    "PossibleNextLocations": [
+      "Dark Forest"
+    ],
+    "Enemies": []
+  }
+]
