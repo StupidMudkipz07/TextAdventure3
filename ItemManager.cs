@@ -4,22 +4,27 @@ class ItemManager
 
     public Dictionary<string, Item> allItems = new();
 
-    string GetItemData(string filePath) => File.ReadAllText(filePath);
-
-    List<Item> LoadItems(string input)
+    List<Item> LoadItems(string filePath)
     {
-        return JsonSerializer.Deserialize<List<Item>>(input, new JsonSerializerOptions { IncludeFields = true }) ?? [];
+        string data = File.ReadAllText(filePath);
+
+        return JsonSerializer.Deserialize<List<Item>>(data, new JsonSerializerOptions { IncludeFields = true }) ?? [];
     }
 
     //loads all the enemys to the dictionary
     public void InitializeItems()
     {
-        foreach (Item item in LoadItems(GetItemData(resourceFilePath)))
+        foreach (Item item in LoadItems(resourceFilePath))
         {
             allItems.Add(item.Name, item);
             //debug bullshit
-            // enemy.PrintEnemy();
+            //item.PrintItem();
         }
+    }
+
+    public ItemManager()
+    {
+        InitializeItems();
     }
 
 }

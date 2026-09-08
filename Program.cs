@@ -1,18 +1,15 @@
 ﻿global using System.Text.Json.Serialization;
 
-Player player = new() { Hp = 100, Damage = 67, Defense = 1, StealChance = 67 };
-
 Console.Clear();
 
 ItemManager itemManager = new();
 
-itemManager.InitializeItems();
+FightManager fightManager = new(itemManager);
 
-FightManager fightManager = new();
-
-fightManager.InitializeEnemies();
-
-LocationManager locationManager = new(player, fightManager, "Torget");
+//världens mest läsbara kod här!!!!!!
+LocationManager locationManager = new(new() { Hp = 100, Damage = 67, Defense = 1, StealChance = 67 },
+fightManager, 
+ "Torget");
 
 locationManager.PlayRealGAMEOMMG();
 

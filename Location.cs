@@ -1,15 +1,15 @@
 struct Location
 {
-    public string Name = "";
-    public List<string> Descriptions = new();
-    public List<string> PossibleNextLocations = new();
-    public List<string> Enemies = new();
+    [JsonInclude] public string Name = "";
+    [JsonInclude] public List<string> Descriptions = new();
+    [JsonInclude] public List<string> PossibleNextLocations = new();
+    [JsonInclude] public List<string> Enemies = new();
 
     public void PrintLocation()
     {
         Console.WriteLine(Name);
-       
-       Console.WriteLine(S.ListToString(Descriptions));
+
+        Console.WriteLine(S.ListToString(Descriptions));
 
         Console.WriteLine(S.ListToString(PossibleNextLocations));
 

@@ -63,6 +63,7 @@ class Fight
 	{
 		while (Winner == null)
 		{
+			Console.ReadKey();
 			turn++;
 			Console.WriteLine("\nturn: " + turn);
 			PrintHp(player, opponent);
@@ -79,6 +80,8 @@ class Fight
 		{
 			System.Console.WriteLine($"{player.Name} dog en plågsam död...");
 			System.Console.WriteLine($"...i AdolfKirkKöping");
+			Console.ReadLine();
+			//här ska programmet stängas av
 		}
 	}
 
