@@ -1,7 +1,11 @@
 class FightManager
 {
-    Dictionary<string, AdolfKirkKöpingResidents> allEnemies = new();
-    
+    ItemManager itemManager;
+
+    public string resourceFilePath = "enemies.json";
+
+    public Dictionary<string, AdolfKirkKöpingResidents> allEnemies = new();
+
     List<AdolfKirkKöpingResidents> LoadEnemies(string filePath)
     {
         string data = File.ReadAllText(filePath);
@@ -12,18 +16,18 @@ class FightManager
     //loads all the enemys to the dictionary
     public void InitializeEnemies()
     {
-        foreach (AdolfKirkKöpingResidents enemy in LoadEnemies("enemies.json"))
+        foreach (AdolfKirkKöpingResidents enemy in LoadEnemies(resourceFilePath))
         {
             allEnemies.Add(enemy.Name, enemy);
-
             //debug bullshit
-            enemy.PrintEnemy();
+            // enemy.PrintEnemy();
         }
     }
 
-    public void StartFight(Player player, AdolfKirkKöpingResidents enemy)
+    public void StartNewFight(Player player, AdolfKirkKöpingResidents enemy)
     {
-        Fight fight = new Fight(player,enemy);
+        Fight Kirkigaste = new Fight(player, enemy);
+        Kirkigaste.ExecuteFight();
     }
 
 }

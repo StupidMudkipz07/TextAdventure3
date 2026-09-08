@@ -1,22 +1,22 @@
-
-using System.Collections;
 using System.Text.Json.Serialization;
-using System.Xml.Linq;
-using static System.Net.Mime.MediaTypeNames;
 
 abstract class FigthableEntity
 {
-    [JsonInclude] public string Name;
-    [JsonInclude] public float Hp;
-    [JsonInclude] public float Damage;
-    [JsonInclude] public float Defense;
-    [JsonInclude] public List<string> savedInventory;
+	[JsonInclude] public string Name;
+	[JsonInclude] public string Description;
+	[JsonInclude] public int Hp;
+	[JsonInclude] public int Damage;
+	[JsonInclude] public int Defense;
+	[JsonInclude] public int StealChance;
+	[JsonInclude] public List<string> savedInventory;
 
-	public float totalDamage;
-    public bool IsDefending;
+	public int totalDamage;
+	public bool IsDefending;
+	public List<Item> inventory = new();
 
-    public void Attack(FigthableEntity target)
-    {
+	//incombat options
+	public void Attack(FigthableEntity target)
+	{
 		totalDamage = 0;
 
 		if (target.Defense >= Damage)
@@ -26,8 +26,12 @@ abstract class FigthableEntity
 
 		target.Hp -= totalDamage;
 	}
-    public void Steal(FigthableEntity target, float stealChance)
-    {
+
+	public void Steal(FigthableEntity target, int stealChance)
+	{
+		Console.WriteLine($"{Name} attempted to steal from {target.Name}...");
+		//kanske kan bytas ut mot thread.sleep
+		Console.ReadKey();
 		if (target.inventory.Count < 1)
 		{
 			Console.WriteLine("No items to steal!");
@@ -35,22 +39,33 @@ abstract class FigthableEntity
 		}
 
 		Random stealRnd = new Random();
-		if (stealRnd.Next(1, 101) % 2 == 1)
+		if (stealRnd.Next(1, 101) > stealChance)
 		{
-			Console.WriteLine($"{Name} attempted to steal but failed!");
+			Console.WriteLine($" but it failed!");
 			return;
 		}
 
-		int i = stealRnd.Next(0, inventory.Count);
-		var stolenItem = target.inventory[i];
-		target.inventory.RemoveAt(i);
+		int itemToStealFromList = stealRnd.Next(0, inventory.Count);
+		Item stolenItem = target.inventory[itemToStealFromList];
+		target.inventory.RemoveAt(itemToStealFromList);
 		inventory.Add(stolenItem);
+
 		Console.WriteLine($"{Name} stole {stolenItem.Name}!");
 	}
-    public void Defend()
-    {
+
+	public void Defend()
+	{
+		System.Console.WriteLine($"{Name} braced for impact");
 		Defense *= 2;
 		IsDefending = true;
+	}
+
+	public void Inspect(FigthableEntity target)
+	{
+		Console.WriteLine($"{Name} studied {target.Name}");	
+		Console.ReadKey();
+		//Console.WriteLine($"{Name}s studier ledde till Denna information:");	
+		Console.WriteLine(target.Description);
 	}
 
 	public void ResetDefend()
@@ -62,6 +77,6 @@ abstract class FigthableEntity
 		}
 	}
 
-    public List<Item> inventory = new();
+	
 
 }

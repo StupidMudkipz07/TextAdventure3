@@ -2,6 +2,8 @@ class LocationManager
 {
     public Dictionary<string, Location> locationsOfAdolfKirkKöping = new();
 
+    public string resourceFilePath = "locations.json";
+
     Location currentLocation;
     Player player;
 
@@ -9,14 +11,25 @@ class LocationManager
 
     void PlayLocation(Location location)
     {
+        Console.Clear();
         foreach (string text in location.Descriptions)
         {
             System.Console.WriteLine(text);
             //ändra till readkey kanske om konsolen tillåter det
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
-        //hända figth
+        //köttigaste fighten pågår här
+        if (location.Enemies.Count > 0)
+        {
+            Random randomEnemyIndex = new Random();
+
+            string enemyToFight = location.Enemies[randomEnemyIndex.Next(0, location.Enemies.Count)];
+
+            AdolfKirkKöpingResidents enemy = fightManager.allEnemies[enemyToFight];
+
+            fightManager.StartNewFight(player, enemy);
+        }
 
         System.Console.WriteLine("välj vart du vill gå");
         System.Console.WriteLine(S.ListToString(location.PossibleNextLocations));
@@ -25,7 +38,6 @@ class LocationManager
         currentLocation = locationsOfAdolfKirkKöping[location.PossibleNextLocations[S.GetIntFromConsole(1, location.PossibleNextLocations.Count) - 1]];
         //den basically tar int från konsolen och sedan plockar det indexet från string listan och tar den locationen som matchar
     }
-
 
     public void PlayRealGAMEOMMG()
     {
@@ -43,7 +55,7 @@ class LocationManager
     //loads all the locations to the dictionary
     void InitializeLocations()
     {
-        foreach (Location location in LoadLocations("locations.json"))
+        foreach (Location location in LoadLocations(resourceFilePath))
         {
             locationsOfAdolfKirkKöping.Add(location.Name, location);
 
@@ -59,4 +71,4 @@ class LocationManager
         this.fightManager = fightManager;
         currentLocation = locationsOfAdolfKirkKöping[startLocation];
     }
-}                                                                                               
+}

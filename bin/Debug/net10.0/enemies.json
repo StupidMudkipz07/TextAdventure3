@@ -1,16 +1,46 @@
 [
   {
     "Name": "Adolf Kirk",
+    "Description": "Den legendariska Adolf Kirk behöver inte beskrivas",
     "Hp": 1000,
-    "Damage" : 67,
-    "Defense" : 1,
-    "savedInventory": [""]
+    "Damage": 67,
+    "Defense": 40,
+    "StealChance": 85,
+    "savedInventory": [
+      ""
+    ]
   },
   {
     "Name": "Anton",
+    "Description": "Basic fiende i AdolfKirkKöping",
     "Hp": 100,
-    "Damage" : 6,
-    "Defense" : 1,
-    "savedInventory": [""]
+    "Damage": 6,
+    "Defense": 4,
+    "StealChance": 34,
+    "savedInventory": [
+      ""
+    ]
+  },
+  {
+    "Name": "Mikael Ordin",
+    "Description": "Testing enemy",
+    "Hp": 40,
+    "Damage": 60,
+    "Defense": 6,
+    "StealChance": 70,
+    "savedInventory": [
+      ""
+    ]
+  },
+  {
+    "Name": "KirkDonalds employee",
+    "Description": "KirkDonalds",
+    "Hp": 30,
+    "Damage": 1,
+    "Defense": 60,
+    "StealChance": 34,
+    "savedInventory": [
+      ""
+    ]
   }
 ]

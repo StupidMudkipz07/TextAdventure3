@@ -10,8 +10,7 @@
       "båt"
     ],
     "Enemies": [
-      "Wolf",
-      "Goblin"
+      "Anton"
     ]
   },
   {
@@ -20,9 +19,12 @@
       "Just nu kirkar jag ner informationen"
     ],
     "PossibleNextLocations": [
-      "båt"
+      "båt",
+      "KirkDonalds"
     ],
-    "Enemies": []
+    "Enemies": [
+      "Adolf Kirk"
+    ]
   },
   {
     "Name": "båt",
@@ -35,7 +37,23 @@
       "Torget"
     ],
     "Enemies": [
-      "mikael ordin"
+      "Mikael Ordin"
+    ]
+  },
+   {
+    "Name": "KirkDonalds",
+    "Descriptions": [
+      "Du beställer KirkDonalds burgaren at 3AM med en färsk kirkjuice",
+      "Det smakade som...",
+      "",
+      "..."
+    ],
+    "PossibleNextLocations": [
+      "Sewers",
+      "Torget"
+    ],
+    "Enemies": [
+      "KirkDonalds employee"
     ]
   }
 ]

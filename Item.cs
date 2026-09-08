@@ -1,5 +1,13 @@
+
+
 struct Item
 {
-    public string Name;
-    public string Description;
+    [JsonInclude] public string Name;
+    [JsonInclude] public string Description;
+
+    void PrintItem()
+    {
+        System.Console.WriteLine(Name);
+        System.Console.WriteLine(Description);
+    }
 }
