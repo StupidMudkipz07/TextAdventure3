@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!-- byt target framework till 8.0 på skoldatorn och 9.0 hemma -->
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>text</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <Content Include="locations.json" CopyToOutputDirectory="PreserveNewest"/>
+    <Content Include="enemies.json" CopyToOutputDirectory="PreserveNewest"/>
+  </ItemGroup>
+
+</Project>
