@@ -15,7 +15,7 @@ class Fight
     bool AttackTarget(FigthableEntity attcker, FigthableEntity target)
     {
         attcker.Attack(target);
-        Console.WriteLine(attcker.Name + " attacked " + target.Name + " for " + attcker.Attack + " damage");
+        Console.WriteLine(attcker.Name + " attacked " + target.Name + " for " + attcker.totalDamage + " damage");
         if (target.Hp <= 0)
         {
             System.Console.WriteLine(target.Name + " was kirked out");
@@ -38,19 +38,66 @@ class Fight
 
     void RunFight(FigthableEntity player, FigthableEntity opponent)
     {
-        while (Winner == null)
-        {
-            turn++;
-            System.Console.WriteLine("turn: " + turn);
-            PrintHp(player,opponent);
-            if (AttackTarget(opponent, player)) Winner = opponent;
-            else if (AttackTarget(player, opponent)) Winner = player;
-            else; 
-        }
-        System.Console.WriteLine("the winner is " + Winner.Name);
-    }
+		while (Winner == null)
+		{
+			turn++;
+			Console.WriteLine("\nturn: " + turn);
+			OpponentChoice(player, opponent);
+			player.ResetDefend();
+			PlayerChoice(player, opponent);
+			opponent.ResetDefend();
+			PrintHp(player, opponent);
+		}
+		Console.WriteLine("the winner is " + Winner.Name);
+	}
 
-    public void ExecuteFight()
+	public void OpponentChoice(FigthableEntity player, FigthableEntity opponent)
+	{
+		Random opponentRandom = new Random();
+
+		switch (opponentRandom.Next(1, 4))
+		{
+			case 1:
+				if (AttackTarget(opponent, player))
+					Winner = opponent;
+				break;
+			case 2:
+				opponent.Defend();
+				break;
+			case 3:
+				opponent.Steal(player, 1f);
+				break;
+			default:
+				break;
+		}
+	}
+
+	public void PlayerChoice(FigthableEntity player, FigthableEntity opponent)
+	{
+		Console.WriteLine("Välj en av de följade.");
+		Console.WriteLine("1: Attack\n2: Defend\n3. Steal");
+		Console.Write("Val: ");
+
+		int choicsInt = S.GetIntFromConsole();
+		switch (choicsInt)
+		{
+			case 1:
+				if (AttackTarget(player, opponent))
+					Winner = player;
+				break;
+			case 2:
+				player.Defend();
+				break;
+			case 3:
+				player.Steal(opponent, 1f);
+				break;
+			default:
+				break;
+		}
+	}
+
+
+	public void ExecuteFight()
     {
         StartFight(playerEntity,opponentEntity);
         RunFight(playerEntity,opponentEntity);

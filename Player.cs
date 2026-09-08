@@ -11,19 +11,4 @@ class Player : FigthableEntity
         Name = Console.ReadLine();
     }
 
-    public override void Attack(FigthableEntity target)
-    {
-        target.Hp -= Damage;
-    }  
-
-    public override void Defend()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override void Steal(FigthableEntity target, float stealChance)
-    {
-        throw new NotImplementedException();
-    }
-
 }
