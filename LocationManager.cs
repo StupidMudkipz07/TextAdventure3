@@ -5,12 +5,15 @@ class LocationManager
     Location currentLocation;
     Player player;
 
+    FightManager fightManager;
+
     void PlayLocation(Location location)
     {
         foreach (string text in location.Descriptions)
         {
             System.Console.WriteLine(text);
-            Console.ReadKey();
+            //ändra till readkey kanske om konsolen tillåter det
+            Console.ReadLine();
         }
 
         //hända figth
@@ -49,10 +52,11 @@ class LocationManager
         }
     }
 
-    public LocationManager(Player player, string startLocation)
+    public LocationManager(Player player, FightManager fightManager, string startLocation)
     {
         InitializeLocations();
         this.player = player;
+        this.fightManager = fightManager;
         currentLocation = locationsOfAdolfKirkKöping[startLocation];
     }
-}
+}                                                                                               

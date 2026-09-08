@@ -1,14 +1,28 @@
 
+using System.Text.Json.Serialization;
+
 abstract class FigthableEntity
 {
-    public string Name;
-    public float Hp;
-    public float Damage;
+    [JsonInclude] public string Name;
+    [JsonInclude] public float Hp;
+    [JsonInclude] public float Damage;
+    [JsonInclude] public float Defense;
+    [JsonInclude] public List<string> savedInventory;
     public bool IsDefending;
 
-    public abstract void Attack(FigthableEntity target);
-    public abstract void Steal(FigthableEntity target, float stealChance);
-    public abstract void Defend();
+    public void Attack(FigthableEntity target)
+    {
+        
+    }
+    public void Steal(FigthableEntity target, float stealChance)
+    {
+        
+    }
+    public void Defend()
+    {
+        
+    }
 
-    List<Item> inventory;
+    public List<Item> inventory;
+
 }

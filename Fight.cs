@@ -54,5 +54,7 @@ class Fight
     {
         StartFight(playerEntity,opponentEntity);
         RunFight(playerEntity,opponentEntity);
+
+        
     }
 }

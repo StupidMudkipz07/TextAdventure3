@@ -1,3 +1,16 @@
 [
-  {}
+  {
+    "Name": "Adolf Kirk",
+    "Hp": 1000,
+    "Damage" : 67,
+    "Defense" : 1,
+    "savedInventory": [""]
+  },
+  {
+    "Name": "Anton",
+    "Hp": 100,
+    "Damage" : 6,
+    "Defense" : 1,
+    "savedInventory": [""]
+  }
 ]

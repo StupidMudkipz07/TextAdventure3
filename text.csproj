@@ -13,6 +13,7 @@
 
     <Content Include="locations.json" CopyToOutputDirectory="PreserveNewest"/>
     <Content Include="enemies.json" CopyToOutputDirectory="PreserveNewest"/>
+    <Content Include="Items.json" CopyToOutputDirectory="PreserveNewest"/>
   </ItemGroup>
 
 </Project>

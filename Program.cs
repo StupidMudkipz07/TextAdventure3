@@ -6,7 +6,8 @@ Console.WriteLine("hej " + player.Name);
 Console.WriteLine("Idag ska du utforska Adolf kirk köping!");
 Console.ReadLine();
 
-LocationManager locationManager = new(player,"Torget");
+
+LocationManager locationManager = new(player,new(),"Torget");
 
 locationManager.PlayRealGAMEOMMG();
 
