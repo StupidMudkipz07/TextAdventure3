@@ -18,7 +18,7 @@ class FightManager
         foreach (string savedItem in enemy.savedInventory)
         {
             //gör så att systemt inte kraschar om fienden inte har items
-            if (!string.IsNullOrWhiteSpace(savedItem)) enemy.inventory.Add(itemManager.allItems[savedItem]);
+            if (!string.IsNullOrWhiteSpace(savedItem)) enemy.inventory.Add(itemManager.AllItems[savedItem]);
         }
     }
 

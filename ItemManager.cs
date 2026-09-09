@@ -2,7 +2,7 @@ class ItemManager
 {
     public string resourceFilePath = "Items.json";
 
-    public Dictionary<string, Item> allItems = new();
+    public Dictionary<string, Item> AllItems = new();
 
     List<Item> LoadItems(string filePath)
     {
@@ -16,7 +16,7 @@ class ItemManager
     {
         foreach (Item item in LoadItems(resourceFilePath))
         {
-            allItems.Add(item.Name, item);
+            AllItems.Add(item.Name, item);
             //debug bullshit
             //item.PrintItem();
         }

@@ -1,6 +1,6 @@
 class LocationManager
 {
-    public Dictionary<string, Location> locationsOfAdolfKirkKöping = new();
+    public static Dictionary<string, Location> locationsOfAdolfKirkKöping = new();
 
     public string resourceFilePath = "locations.json";
 
@@ -36,7 +36,7 @@ class LocationManager
 
     void PlayLocation(Location location)
     {
-        Console.Clear();
+		Console.WriteLine(); // Console.Clear() Removed cuz you cant see item requierment text.
 
         //läs upp all text för stället
         ReadLocationText(location);
@@ -51,17 +51,39 @@ class LocationManager
         System.Console.WriteLine(S.ListToString(location.PossibleNextLocations));
 
         //längsta kodraden!!!!!!!11
-        currentLocation = locationsOfAdolfKirkKöping[location.PossibleNextLocations[S.GetIntFromConsole(1, location.PossibleNextLocations.Count) - 1]];
+        var futureLocation = locationsOfAdolfKirkKöping[location.PossibleNextLocations[S.GetIntFromConsole(1, location.PossibleNextLocations.Count) - 1]];
         //den basically tar int från konsolen och sedan plockar det indexet från string listan och tar den locationen som matchar
 
-        //här kommer bästa koden!!!
-        string PlatsSomKräverItem = "";
-        string ItemSomKrävs = "";
-
-        if (currentLocation.Name == PlatsSomKräverItem)
+        //här kommer bästa koden!!! ;)
+        if (futureLocation.NeedItemToEnter)
         {
+            bool success = false;
+            string itemSomKrävs = futureLocation.KeyItem;
+			Console.WriteLine($"Du behöver {itemSomKrävs} för att ta sig in hit");
+
+            //Item temp;
+
+            if (player.inventory.Count() > 0)
+            {
+                var temp = player.inventory.Where(c => c.Name == itemSomKrävs).First();
+
+                if (temp.Name == itemSomKrävs)
+                {
+                    Console.WriteLine($"Du har en {itemSomKrävs}!");
+                    currentLocation = futureLocation;
+                    success = true;
+                }
+            }
             
+            if (!success)
+            {
+                Console.WriteLine($"Du har inte {itemSomKrävs} och can inte gå till {futureLocation.Name}");
+            }
         }
+        else
+        {
+            currentLocation = futureLocation;
+		}
     }
 
     public void PlayRealGAMEOMMG()
@@ -74,7 +96,16 @@ class LocationManager
     {
         string data = File.ReadAllText(filePath);
 
-        return JsonSerializer.Deserialize<List<Location>>(data, new JsonSerializerOptions { IncludeFields = true }) ?? [];
+        var loadedLocations = JsonSerializer.Deserialize<List<Location>>(data, new JsonSerializerOptions { IncludeFields = true }) ?? [];
+
+        for (var i = 0; i < loadedLocations.Count(); ++i)
+        {
+            var theLocation = loadedLocations[i];
+            theLocation.NeedItemToEnter = !string.IsNullOrEmpty(theLocation.KeyItem);
+            loadedLocations[i] = theLocation;
+        }
+
+        return loadedLocations;
     }
 
     //loads all the locations to the dictionary

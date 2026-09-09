@@ -3,7 +3,7 @@
     "Name": "Torget",
     "Descriptions": [
       "Du går ut på torget och ser den stora Adolf Kirk statyn",
-      "Den visar Adolf Kirk som strider mot [insert text]"
+      "Den visar Adolf Kirk som strider mot [REDACTED]"
     ],
     "PossibleNextLocations": [
       "Sewers",
@@ -11,7 +11,8 @@
     ],
     "Enemies": [
       "Anton"
-    ]
+    ],
+    "KeyItem": ""
   },
   {
     "Name": "Sewers",
@@ -24,7 +25,8 @@
     ],
     "Enemies": [
       "Adolf Kirk"
-    ]
+    ],
+    "KeyItem": ""
   },
   {
     "Name": "båt",
@@ -38,9 +40,10 @@
     ],
     "Enemies": [
       "Mikael Ordin"
-    ]
+    ],
+    "KeyItem": "ovve"
   },
-   {
+  {
     "Name": "KirkDonalds",
     "Descriptions": [
       "Du beställer KirkDonalds burgaren at 3AM med en färsk kirkjuice",
@@ -54,6 +57,7 @@
     ],
     "Enemies": [
       "KirkDonalds employee"
-    ]
+    ],
+    "KeyItem": ""
   }
 ]
