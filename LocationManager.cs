@@ -9,26 +9,42 @@ class LocationManager
 
     FightManager fightManager;
 
-    void PlayLocation(Location location)
+    void ReadLocationText(Location location)
     {
-        Console.Clear();
         foreach (string text in location.Descriptions)
         {
             System.Console.WriteLine(text);
             //ändra till readkey kanske om konsolen tillåter det
             Console.ReadKey();
         }
+    }
+
+    void PLayFight(Player player, FightManager fightManager, Location location)
+    {
+        Random randomEnemyIndex = new Random();
+
+        int kirkigasteMikael = randomEnemyIndex.Next(0, location.Enemies.Count);
+
+        string enemyToFight = location.Enemies[kirkigasteMikael]; //välj en random string från listan
+
+        location.Enemies.Remove(enemyToFight); // tar bort stringen som valdes från listan
+
+        AdolfKirkKöpingResidents enemy = fightManager.allEnemies[enemyToFight]; //hitta fienden som associearas med stringen
+
+        fightManager.StartNewFight(player, enemy); //starta fight med denna fiende
+    }
+
+    void PlayLocation(Location location)
+    {
+        Console.Clear();
+
+        //läs upp all text för stället
+        ReadLocationText(location);
 
         //köttigaste fighten pågår här
         if (location.Enemies.Count > 0)
         {
-            Random randomEnemyIndex = new Random();
-
-            string enemyToFight = location.Enemies[randomEnemyIndex.Next(0, location.Enemies.Count)];
-
-            AdolfKirkKöpingResidents enemy = fightManager.allEnemies[enemyToFight];
-
-            fightManager.StartNewFight(player, enemy);
+            PLayFight(player, fightManager, location);
         }
 
         System.Console.WriteLine("välj vart du vill gå");
@@ -37,6 +53,16 @@ class LocationManager
         //längsta kodraden!!!!!!!11
         currentLocation = locationsOfAdolfKirkKöping[location.PossibleNextLocations[S.GetIntFromConsole(1, location.PossibleNextLocations.Count) - 1]];
         //den basically tar int från konsolen och sedan plockar det indexet från string listan och tar den locationen som matchar
+
+        //här kommer bästa koden!!!
+
+        string PlatsSomKräverItem = "";
+        string ItemSomKrävs = "";
+
+        if (currentLocation.Name == PlatsSomKräverItem)
+        {
+
+        }
     }
 
     public void PlayRealGAMEOMMG()
