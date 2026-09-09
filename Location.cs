@@ -4,8 +4,8 @@ struct Location
     [JsonInclude] public List<string> Descriptions = new();
     [JsonInclude] public List<string> PossibleNextLocations = new();
     [JsonInclude] public List<string> Enemies = new();
-    public bool NeedItemToEnter = false;
     [JsonInclude] public string KeyItem = "";
+    public bool NeedItemToEnter = false;
 
     public void PrintLocation()
     {

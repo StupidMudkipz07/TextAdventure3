@@ -1,5 +1,3 @@
-
-
 struct Item
 {
     [JsonInclude] public string Name;

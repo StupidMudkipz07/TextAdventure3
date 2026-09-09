@@ -34,9 +34,45 @@ class LocationManager
         fightManager.StartNewFight(player, enemy); //starta fight med denna fiende
     }
 
+    void ChooseNextLocation(Location location)
+    {
+        Console.WriteLine("välj vart du vill gå");
+        Console.WriteLine(S.ListToString(location.PossibleNextLocations));
+
+        bool success = false;
+
+        //längsta kodraden!!!!!!!11
+        Location futureLocation = locationsOfAdolfKirkKöping[location.PossibleNextLocations[S.GetIntFromConsole(1, location.PossibleNextLocations.Count) - 1]];
+        //den basically tar int från konsolen och sedan plockar det indexet från string listan och tar den locationen som matchar
+
+        if (futureLocation.NeedItemToEnter)
+        {
+            string itemSomKrävs = futureLocation.KeyItem;
+            Console.WriteLine($"Du behöver {itemSomKrävs} för att ta sig in hit");
+            Console.ReadKey();
+
+            //kollar om spelarens inventory har item som krävs
+            if (player.inventory.Any(item => item.Name == itemSomKrävs))
+            {
+                Console.WriteLine($"Du har en {itemSomKrävs}!");
+                currentLocation = futureLocation;
+            }
+            else Console.WriteLine($"Du har inte {itemSomKrävs} och kan inte gå till {futureLocation.Name}");
+            Console.ReadKey();
+
+            //oh my god köttigaste recursion
+            ChooseNextLocation(location);
+        }
+        else
+        {
+            currentLocation = futureLocation;
+        }
+
+    }
+
     void PlayLocation(Location location)
     {
-		Console.WriteLine(); // Console.Clear() Removed cuz you cant see item requierment text.
+        Console.Clear(); //Removed cuz you cant see item requierment text.
 
         //läs upp all text för stället
         ReadLocationText(location);
@@ -47,43 +83,8 @@ class LocationManager
             PLayFight(player, fightManager, location);
         }
 
-        System.Console.WriteLine("välj vart du vill gå");
-        System.Console.WriteLine(S.ListToString(location.PossibleNextLocations));
-
-        //längsta kodraden!!!!!!!11
-        var futureLocation = locationsOfAdolfKirkKöping[location.PossibleNextLocations[S.GetIntFromConsole(1, location.PossibleNextLocations.Count) - 1]];
-        //den basically tar int från konsolen och sedan plockar det indexet från string listan och tar den locationen som matchar
-
-        //här kommer bästa koden!!! ;)
-        if (futureLocation.NeedItemToEnter)
-        {
-            bool success = false;
-            string itemSomKrävs = futureLocation.KeyItem;
-			Console.WriteLine($"Du behöver {itemSomKrävs} för att ta sig in hit");
-
-            //Item temp;
-
-            if (player.inventory.Count() > 0)
-            {
-                var temp = player.inventory.Where(c => c.Name == itemSomKrävs).First();
-
-                if (temp.Name == itemSomKrävs)
-                {
-                    Console.WriteLine($"Du har en {itemSomKrävs}!");
-                    currentLocation = futureLocation;
-                    success = true;
-                }
-            }
-            
-            if (!success)
-            {
-                Console.WriteLine($"Du har inte {itemSomKrävs} och can inte gå till {futureLocation.Name}");
-            }
-        }
-        else
-        {
-            currentLocation = futureLocation;
-		}
+        // välj nästa location att gå till
+        ChooseNextLocation(location);
     }
 
     public void PlayRealGAMEOMMG()

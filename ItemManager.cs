@@ -1,7 +1,6 @@
 class ItemManager
 {
     public string resourceFilePath = "Items.json";
-
     public Dictionary<string, Item> AllItems = new();
 
     List<Item> LoadItems(string filePath)
