@@ -55,13 +55,12 @@ class LocationManager
         //den basically tar int från konsolen och sedan plockar det indexet från string listan och tar den locationen som matchar
 
         //här kommer bästa koden!!!
-
         string PlatsSomKräverItem = "";
         string ItemSomKrävs = "";
 
         if (currentLocation.Name == PlatsSomKräverItem)
         {
-
+            
         }
     }
 
