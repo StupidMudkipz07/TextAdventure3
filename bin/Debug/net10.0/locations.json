@@ -1,13 +1,41 @@
 [
   {
-    "Name": "Torget",
+    "Name": "Bussen",
     "Descriptions": [
-      "Du går ut på torget och ser den stora Adolf Kirk statyn",
-      "Den visar Adolf Kirk som strider mot [REDACTED]"
+      "10 september 2067",
+      "Ditt huvud känns tungt",
+      "Du känner bussens motor skaka när lutar huvudet mot fönstret",
+      "Du har inte kunnat sova i bussen pågrund av det slitna säkerhätsbältet som skaver mot halsen",
+      "Din farfars ord ekade i ditt huvud:",
+      "\"Platsen som kallades Skövde är inte den samma längre\"",
+      "\"Den platsen förtjänar inte ens det namnet efter vad som hände\"",
+      "\"Ordningen och redan som en gång fanns är nu ersatt av en frenesi för makt\"",
+      "\"Det har blivit en ren anarki\"",
+      "\"Åk bara dit när bara dit när du är stark nog\"",
+      "\"Då kanske du kan få reda på hemligheten om Köpingen aldrig blev...\"",
+      "Bussen stannde och du tog din väska och hoppade av bussen",
+      "Du är nu framme i",
+      "AdolfKirkKöping"
     ],
     "PossibleNextLocations": [
-      "Sewers",
-      "båt"
+      "Torget"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Torget",
+    "Descriptions": [
+      "Du går ut på torget och ser en STOR staty",
+      "Statyn visade en muskulös man som för ett svärd genom en präst",
+      "Du gick närmare och läste på placketten",
+      "\"Kronan ärvs bara till den som har styrkan att ta den\"",
+      "Det går inte att utskilja namnet på vem som gjorde statyn"
+    ],
+    "PossibleNextLocations": [
+      "Hemkirk",
+      "Kirkan",
+      "Kloakerna"
     ],
     "Enemies": [
       "Anton"
@@ -15,49 +43,69 @@
     "KeyItem": ""
   },
   {
-    "Name": "Sewers",
+    "Name": "Kloakerna",
     "Descriptions": [
-      "Just nu kirkar jag ner informationen"
+      "Du öppnar ett brunnslock",
+      "Det finns en stege som leder rakt ner i kloaktunnlarna",
+      "Du bestämmer för att gå ner",
+      "Det stinkar avlopp här nere"
     ],
     "PossibleNextLocations": [
-      "båt",
-      "KirkDonalds"
+      "Djupare kloaker"
     ],
     "Enemies": [
-      "Adolf Kirk"
+      "kloak råtta"
+    ],
+    "KeyItem": ""
+  },
+    {
+    "Name": "Djupare kloaker",
+    "Descriptions": [
+      "Du öppnar ett brunnslock",
+      "Det finns en stege som leder rakt ner i kloaktunnlarna",
+      "Du bestämmer för att gå ner",
+      "Det stinkar avlopp här nere"
+    ],
+    "PossibleNextLocations": [
+      "Torget"
+    ],
+    "Enemies": [
+      "kloakigare råtta"
+    ],
+    "KeyItem": "kloak nyckel"
+  },
+  {
+    "Name": "Hemkirk",
+    "Descriptions": [
+      "Du går in i hemkirk",
+      "Det är helt tomt där",
+      "Du går och kollar på om det finns någon buffe kvar",
+      "Det finns bara mozzarella kulor och ruccola kvar",
+      "(konstigt att ingen har käkat upp det här än, det är ju den godaste på hela buffen)"
+    ],
+    "PossibleNextLocations": [
+      "Torget"
+    ],
+    "Enemies": [
+      "Buffe tjuv"
     ],
     "KeyItem": ""
   },
   {
-    "Name": "båt",
+    "Name": "Kirkan",
     "Descriptions": [
-      "Just nu båtar jag ner informationen",
-      "okej nu räcker det"
+      "Du går in i kirkan och ser att den är helt tom",
+      "Det är fullt med damm",
+      "Alla motiv av jesus är ned rivna",
+      "Samma meddelande som stod på statyn är inristat i taket",
+      "\"Kronan ärvs bara till den som har styrkan att ta den\"",
+      "Du börjar redan tröttna på det budskapet"
     ],
     "PossibleNextLocations": [
-      "Sewers",
-      "Torget"
+      "Commerce",
+      "Boulogner parken"
     ],
-    "Enemies": [
-      "Mikael Ordin"
-    ],
-    "KeyItem": "ovve"
-  },
-  {
-    "Name": "KirkDonalds",
-    "Descriptions": [
-      "Du beställer KirkDonalds burgaren at 3AM med en färsk kirkjuice",
-      "Det smakade som...",
-      "",
-      "..."
-    ],
-    "PossibleNextLocations": [
-      "Sewers",
-      "Torget"
-    ],
-    "Enemies": [
-      "KirkDonalds employee"
-    ],
+    "Enemies": [],
     "KeyItem": ""
   }
 ]

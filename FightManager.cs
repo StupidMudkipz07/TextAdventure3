@@ -39,6 +39,8 @@ class FightManager
     {
         Fight Kirkigaste = new Fight(player, enemy);
         Kirkigaste.ExecuteFight();
+        //om programmet fortsätter efter detta så måste spelaren leva
+        // allEnemies.Remove(Kirkigaste.opponentEntity.Name);
     }
 
     public FightManager(ItemManager itemManager)

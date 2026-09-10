@@ -1,17 +1,5 @@
 [
   {
-    "Name": "Adolf Kirk",
-    "Description": "Den legendariska Adolf Kirk behöver inte beskrivas",
-    "Hp": 1000,
-    "Damage": 67,
-    "Defense": 40,
-    "StealChance": 85,
-    "savedInventory": [
-      "Oskar Sia",
-      "Oskar Sia"
-    ]
-  },
-  {
     "Name": "Anton",
     "Description": "Basic fiende i AdolfKirkKöping",
     "Hp": 100,
@@ -23,27 +11,48 @@
     ]
   },
   {
-    "Name": "Mikael Ordin",
-    "Description": "Testing enemy",
-    "Hp": 40,
-    "Damage": 60,
-    "Defense": 6,
-    "StealChance": 70,
+    "Name": "Buffe tjuv",
+    "Description": "Denna varelse har käkat all buffe på hemkirk",
+    "Hp": 100,
+    "Damage": 70,
+    "Defense": 40,
+    "StealChance": 80,
     "savedInventory": [
-      "ovve"
+      "buffe"
     ]
   },
   {
-    "Name": "KirkDonalds employee",
-    "Description": "KirkDonalds",
-    "Hp": 30,
-    "Damage": 1,
-    "Defense": 60,
-    "StealChance": 34,
+    "Name": "kloak råtta",
+    "Description": "springer avloppet varje år",
+    "Hp": 100,
+    "Damage": 20,
+    "Defense": 20,
+    "StealChance": 25,
     "savedInventory": [
-      "Kirk juice",
-      "Kirk juice",
-      "Kirk juice"
+      "kloak nyckel"
+    ]
+  },
+   {
+    "Name": "kloakigare råtta",
+    "Description": "springer avloppet varje år",
+    "Hp": 150,
+    "Damage": 12,
+    "Defense": 24,
+    "StealChance": 45,
+    "savedInventory": [
+      "kloak nyckel"
+    ]
+  },
+  {
+    "Name": "Adolf Kirk",
+    "Description": "Den legendariska Adolf Kirk behöver inte beskrivas",
+    "Hp": 1000,
+    "Damage": 67,
+    "Defense": 40,
+    "StealChance": 85,
+    "savedInventory": [
+      "Oskar Sia",
+      "Oskar Sia"
     ]
   }
 ]

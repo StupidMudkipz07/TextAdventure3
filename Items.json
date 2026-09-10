@@ -11,8 +11,17 @@
     "Name": "Oskar Sia",
     "Description": "Köttingaste saken på denna sidan floden"
   },
-   {
+  {
     "Name": "Kirk juice",
     "Description": "Denna juice är gjord på Adolf Kirks fluids...   enligt legenden i alla fall \nden smakar som lätt blandad saft"
+  },
+  {
+    "Name": "buffe",
+    "Description": "Buffe från hemkirk, den är full av mozzarella kulor och ruccola"
+  },
+
+  {
+    "Name": "kloak nyckel",
+    "Description": "en nyckel som låser upp djupare kloaker. Vem låser ens sina kloaker?"
   }
 ]

@@ -7,11 +7,24 @@ static class S
         string output = "";
         for (int i = 0; i < list.Count; i++)
         {
-            output += "\n   " + (i+1) + ": " + list[i];
+            output += "\n   " + (i + 1) + ": " + list[i];
         }
         if (output == "") return "empty list";
         else return output;
     }
+
+    public static string ListToString(List<Item> list)
+    {
+        string output = "";
+        for (int i = 0; i < list.Count; i++)
+        {
+            output += "\n   " + (i + 1) + ": " + list[i].Name;
+            output += "\n   " + list[i].Description;
+        }
+        if (output == "") return "empty list";
+        else return output;
+    }
+
 
     public static int GetIntFromConsole()
     {

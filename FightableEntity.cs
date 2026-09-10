@@ -1,4 +1,6 @@
 
+using System.Runtime.InteropServices;
+
 abstract class FigthableEntity
 {
 	[JsonInclude] public string Name;
@@ -61,10 +63,15 @@ abstract class FigthableEntity
 
 	public void Inspect(FigthableEntity target)
 	{
-		Console.WriteLine($"{Name} studied {target.Name}");	
+		Console.WriteLine($"{Name} studied {target.Name}");
 		Console.ReadKey();
-		//Console.WriteLine($"{Name}s studier ledde till Denna information:");	
+		Console.WriteLine($"{Name}'s inspection informed him about this information:");
 		Console.WriteLine(target.Description);
+		if (target.inventory.Count > 0)
+		{
+			Console.WriteLine($"This was found in {target.Name}'s inventory:");
+			Console.WriteLine(S.ListToString(target.inventory));
+		}
 	}
 
 	public void ResetDefend()
@@ -76,6 +83,6 @@ abstract class FigthableEntity
 		}
 	}
 
-	
+
 
 }

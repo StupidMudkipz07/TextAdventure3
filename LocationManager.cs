@@ -57,11 +57,13 @@ class LocationManager
                 Console.WriteLine($"Du har en {itemSomKrävs}!");
                 currentLocation = futureLocation;
             }
-            else Console.WriteLine($"Du har inte {itemSomKrävs} och kan inte gå till {futureLocation.Name}");
+            else
+            {
+                //oh my god köttigaste recursion
+                Console.WriteLine($"Du har inte {itemSomKrävs} och kan inte gå till {futureLocation.Name}");
+                ChooseNextLocation(location);
+            }
             Console.ReadKey();
-
-            //oh my god köttigaste recursion
-            ChooseNextLocation(location);
         }
         else
         {

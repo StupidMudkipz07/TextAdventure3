@@ -1,7 +1,7 @@
 class Fight
 {
-	FigthableEntity playerEntity;
-	FigthableEntity opponentEntity;
+	public FigthableEntity playerEntity;
+	public FigthableEntity opponentEntity;
 	int turn = 0;
 
 	FigthableEntity? Winner = null;
@@ -59,32 +59,6 @@ class Fight
 		System.Console.WriteLine("A battle ensues");
 	}
 
-	void RunFight(FigthableEntity player, FigthableEntity opponent)
-	{
-		while (Winner == null)
-		{
-			Console.ReadKey();
-			turn++;
-			Console.WriteLine("\nturn: " + turn);
-			PrintHp(player, opponent);
-
-			FightAct(player, opponent, PlayerChoice());
-			if (opponent.Hp > 0) //sluta fighten om fienden dör
-			{
-				Console.ReadKey();
-				FightAct(opponent, player, OpponentChoice());
-			}
-		}
-		Console.WriteLine("the winner is " + Winner.Name);
-		if (Winner != player)
-		{
-			System.Console.WriteLine($"{player.Name} dog en plågsam död...");
-			System.Console.WriteLine($"...i AdolfKirkKöping");
-			Console.ReadLine();
-			//här ska programmet stängas av
-		}
-	}
-
 	void FightAct(FigthableEntity user, FigthableEntity target, int option)
 	{
 		switch (option)
@@ -121,6 +95,35 @@ class Fight
 
 		return S.GetIntFromConsole(1, 4);
 	}
+
+	void RunFight(FigthableEntity player, FigthableEntity opponent)
+	{
+		while (Winner == null)
+		{
+			Console.ReadKey();
+			turn++;
+			Console.WriteLine("\nturn: " + turn);
+			PrintHp(player, opponent);
+
+			FightAct(player, opponent, PlayerChoice());
+			if (opponent.Hp > 0) //sluta fighten om fienden dör
+			{
+				Console.ReadKey();
+				FightAct(opponent, player, OpponentChoice());
+			}
+		}
+		Console.WriteLine("the winner is " + Winner.Name);
+		if (Winner != player)
+		{
+			System.Console.WriteLine($"{player.Name} dog en plågsam död...");
+			System.Console.WriteLine($"...i AdolfKirkKöping");
+			Console.ReadLine();
+			//här ska programmet stängas av
+			Environment.Exit(0);
+		}
+	}
+
+
 
 	public void ExecuteFight()
 	{
