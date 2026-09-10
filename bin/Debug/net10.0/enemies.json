@@ -67,7 +67,6 @@
       "Kirk juice"
     ]
   },
-
   {
     "Name": "Valross",
     "Description": "Denna Valross letar fortfarande efter badkaret på boten av sjön",
@@ -75,7 +74,19 @@
     "Damage": 7,
     "Defense": 14,
     "StealChance": 80,
+    "savedInventory": []
+  },
+  {
+    "Name": "Mathias Alzate",
+    "Description": "Den legendariska AMathis Alzate behöver inte beskrivas",
+    "Hp": 1000,
+    "Damage": 1,
+    "Defense": 1,
+    "StealChance": 14,
     "savedInventory": [
+      "Pocket Mathias",
+      "Pocket Miku",
+      "Pocket Teto"
     ]
   },
   {
