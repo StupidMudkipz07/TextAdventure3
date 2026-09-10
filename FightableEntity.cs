@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using System.Security.AccessControl;
 
 abstract class FigthableEntity
@@ -27,6 +28,10 @@ abstract class FigthableEntity
 		target.Hp -= totalDamage;
 	}
 
+	/// <summary>
+	/// Give one item to the target and the target gives one item back.
+	/// </summary>
+	/// <param name="target">The target.</param>
 	public void Trade(FigthableEntity target)
 	{
 		Console.WriteLine($"{Name} is trading with {target.Name}. {target.Name} can't refuse.");
@@ -44,32 +49,56 @@ abstract class FigthableEntity
 			return;
 		}
 
+		WriteTradableItems();
+		target.WriteTradableItems();
+
+		MoveTradedItem(target, SelectTradeItemIndex(), target.SelectTradeItemIndex());
+	}
+
+	/// <summary>
+	/// Writes the inventory for traidning.
+	/// </summary>
+	private void WriteTradableItems()
+	{
 		Console.WriteLine($"{Name}s invetory:");
 		Console.WriteLine(S.ListToString(inventory));
-		Console.WriteLine($"{target.Name}s invetory:");
-		Console.WriteLine(S.ListToString(target.inventory));
-
-		int playerItemIndex = TradeSelectItem();
-		int targetIntemIndex = TradeSelectItem(target);
-
-		target.inventory.Add(inventory[playerItemIndex]);
-		Console.WriteLine($"{Name} gave {inventory[playerItemIndex].Name} to {target.Name}");
-		inventory.RemoveAt(playerItemIndex);
-
-		inventory.Add(target.inventory[targetIntemIndex]);
-		Console.WriteLine($"{target.Name} gave {target.inventory[playerItemIndex].Name} to {Name}");
-		target.inventory.RemoveAt(targetIntemIndex);
 	}
 
-	private int TradeSelectItem()
+	/// <summary>
+	/// Returns index for the seleced item.
+	/// </summary>
+	/// <returns>Index of item to trade.</returns>
+	private int SelectTradeItemIndex()
 	{
-		Console.WriteLine($"Chose {Name}s item to tacke:");
-		return S.GetIntFromConsole(1, inventory.Count) - 1;
+		Console.WriteLine($"Choose {Name}s item to give:");
+
+		// Returns the index for the selected item.
+		return S.GetIntFromConsole(1, inventory.Count) - 1; 
 	}
-	private int TradeSelectItem(FigthableEntity target)
+
+	/// <summary>
+	/// Moves the item selected between target and player.
+	/// </summary>
+	/// <param name="target">The target to trade with.</param>
+	/// <param name="playerIndex">The index for the item the player is going to give.</param>
+	/// <param name="targetIndex">The index for the item the target is going to give.</param>
+	private void MoveTradedItem(FigthableEntity target, int playerIndex, int targetIndex)
 	{
-		Console.WriteLine($"Chose {target.Name}s item to tacke:");
-		return S.GetIntFromConsole(1, target.inventory.Count) - 1;
+		// Write what FightableEntity gave what item to whom.
+		Console.WriteLine($"{Name} gave {inventory[playerIndex].Name} to {target.Name}");
+		Console.WriteLine($"{target.Name} gave {target.inventory[targetIndex].Name} to {Name}");
+
+		// Create temporary copies of the trading items.
+		var playerTradeItem = inventory[playerIndex];
+		var targetTradeitem = target.inventory[targetIndex];
+
+		// Remove the items from the FightableEntitys inventories.
+		target.inventory.RemoveAt(targetIndex);
+		inventory.RemoveAt(playerIndex);
+
+		// Give the FightableEntitys the traded tiems
+		target.inventory.Add(playerTradeItem);
+		inventory.Add(targetTradeitem);
 	}
 
 	public void Steal(FigthableEntity target, int stealChance)
