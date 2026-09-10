@@ -25,7 +25,6 @@ static class S
         else return output;
     }
 
-
     public static int GetIntFromConsole()
     {
         int output;
@@ -57,5 +56,4 @@ static class S
             }
         }
     }
-
 }

@@ -44,6 +44,17 @@
     ]
   },
   {
+    "Name": "Gibbaren",
+    "Description": "Han sloppar sin kirk varje dag på xboy",
+    "Hp": 150,
+    "Damage": 40,
+    "Defense": 1,
+    "StealChance": 80,
+    "savedInventory": [
+      "Monster Kirker 3 Tri"
+    ]
+  },
+  {
     "Name": "KirkDonalds employee",
     "Description": "KirkDonalds",
     "Hp": 30,

@@ -35,7 +35,8 @@
     "PossibleNextLocations": [
       "Hemkirk",
       "Kirkan",
-      "Kloakerna"
+      "Kloakerna",
+      "XBOY"
     ],
     "Enemies": [
       "Anton"
@@ -105,7 +106,6 @@
     ],
     "KeyItem": ""
   },
-
   {
     "Name": "Hemkirk",
     "Descriptions": [
@@ -139,6 +139,24 @@
       "Torget"
     ],
     "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "XBOY",
+    "Descriptions": [
+      "Längst bort på torget ser du skylten för XBOY",
+      "Du minns hur din farfar berättade att han brukade gå dit varje lunchrast för att se om de hade fått en kopia av Dink Souls för SlopStaion 3",
+      "Såklart så fick de aldrig in det spelet för det var exklusivt för vietnam",
+      "Du är förvånad att den inte har blivit kirkifierad som resten av staden",
+      "Alla spelen för SlopStaion 3 är borta"
+    ],
+    "PossibleNextLocations": [
+      "Kirkan",
+      "Torget"
+    ],
+    "Enemies": [
+      "Gibbaren"
+    ],
     "KeyItem": ""
   }
 ]

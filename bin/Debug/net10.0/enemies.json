@@ -32,15 +32,39 @@
       "kloak nyckel"
     ]
   },
-   {
+  {
     "Name": "kloakigare råtta",
-    "Description": "springer avloppet varje år",
+    "Description": "springer bara avloppet varannat år",
     "Hp": 150,
     "Damage": 12,
-    "Defense": 24,
+    "Defense": 20,
     "StealChance": 45,
     "savedInventory": [
       "kloak nyckel"
+    ]
+  },
+  {
+    "Name": "Gibbaren",
+    "Description": "Han sloppar sin kirk varje dag på xboy",
+    "Hp": 150,
+    "Damage": 40,
+    "Defense": 1,
+    "StealChance": 80,
+    "savedInventory": [
+      "Monster Kirker 3 Tri"
+    ]
+  },
+  {
+    "Name": "KirkDonalds employee",
+    "Description": "KirkDonalds",
+    "Hp": 30,
+    "Damage": 1,
+    "Defense": 60,
+    "StealChance": 34,
+    "savedInventory": [
+      "Kirk juice",
+      "Kirk juice",
+      "Kirk juice"
     ]
   },
   {

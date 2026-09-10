@@ -1,6 +1,3 @@
-
-using System.Runtime.InteropServices;
-
 abstract class FigthableEntity
 {
 	[JsonInclude] public string Name;

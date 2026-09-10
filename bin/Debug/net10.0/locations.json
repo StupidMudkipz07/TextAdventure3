@@ -35,7 +35,8 @@
     "PossibleNextLocations": [
       "Hemkirk",
       "Kirkan",
-      "Kloakerna"
+      "Kloakerna",
+      "XBOY"
     ],
     "Enemies": [
       "Anton"
@@ -51,7 +52,8 @@
       "Det stinkar avlopp här nere"
     ],
     "PossibleNextLocations": [
-      "Djupare kloaker"
+      "Djupare kloaker",
+      "Torget"
     ],
     "Enemies": [
       "kloak råtta"
@@ -66,12 +68,43 @@
       "du fortsätter in i kloakerna"
     ],
     "PossibleNextLocations": [
-      "Torget"
+      "Kirkan",
+      "ännu djupare kloaker"
     ],
     "Enemies": [
       "kloakigare råtta"
     ],
     "KeyItem": "kloak nyckel"
+  },
+  {
+    "Name": "ännu djupare kloaker",
+    "Descriptions": [
+      "Du stoppar in kloak nyckeln i kloaklåset",
+      "kloakdörren öppnas och en förfärlig stank väller över dig",
+      "du har nu vant vid lukten och undrar om varför någon satte upp två dörrar i kloakerna"
+    ],
+    "PossibleNextLocations": [
+      "KirkDonalds"
+    ],
+    "Enemies": [],
+    "KeyItem": "kloak nyckel"
+  },
+  {
+    "Name": "KirkDonalds",
+    "Descriptions": [
+      "Du beställer KirkDonalds burgaren at 3AM med en färsk kirkjuice",
+      "Det smakade som...",
+      "",
+      "..."
+    ],
+    "PossibleNextLocations": [
+      "Kirkan",
+      "Boulogner parken"
+    ],
+    "Enemies": [
+      "KirkDonalds employee"
+    ],
+    "KeyItem": ""
   },
   {
     "Name": "Hemkirk",
@@ -102,7 +135,24 @@
     ],
     "PossibleNextLocations": [
       "Commerce",
-      "Boulogner parken"
+      "Boulogner parken",
+      "Torget"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "XBOY",
+    "Descriptions": [
+      "Längst bort på torget ser du skylten för XBOY",
+      "Du minns hur din farfar berättade att han brukade gå dit varje lunchrast för att se om de hade fått en kopia av Dink Souls för SlopStaion 3",
+      "Såklart så fick de aldrig in det spelet för det var exklusivt för vietnam",
+      "Du är förvånad att den har blivit kirkifierad som resten av staden",
+      "Alla spelen för SlopStaion 3 är borta"
+    ],
+    "PossibleNextLocations": [
+      "Kirkan",
+      "Torget"
     ],
     "Enemies": [],
     "KeyItem": ""

@@ -19,9 +19,12 @@
     "Name": "buffe",
     "Description": "Buffe från hemkirk, den är full av mozzarella kulor och ruccola"
   },
-
   {
     "Name": "kloak nyckel",
     "Description": "en nyckel som låser upp djupare kloaker. Vem låser ens sina kloaker?"
+  },
+  {
+    "Name": "Monster Kirker 3 Tri",
+    "Description": "Detta spelet kommer med en instruktionsmanual!"
   }
 ]
