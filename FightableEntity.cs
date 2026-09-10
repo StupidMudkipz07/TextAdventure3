@@ -43,7 +43,7 @@ abstract class FigthableEntity
 			return;
 		}
 
-		int itemToStealFromList = stealRnd.Next(0, inventory.Count);
+		int itemToStealFromList = stealRnd.Next(0, target.inventory.Count);
 		Item stolenItem = target.inventory[itemToStealFromList];
 		target.inventory.RemoveAt(itemToStealFromList);
 		inventory.Add(stolenItem);

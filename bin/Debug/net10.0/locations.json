@@ -147,12 +147,68 @@
       "Längst bort på torget ser du skylten för XBOY",
       "Du minns hur din farfar berättade att han brukade gå dit varje lunchrast för att se om de hade fått en kopia av Dink Souls för SlopStaion 3",
       "Såklart så fick de aldrig in det spelet för det var exklusivt för vietnam",
-      "Du är förvånad att den har blivit kirkifierad som resten av staden",
+      "Du är förvånad att den inte har blivit kirkifierad som resten av staden",
       "Alla spelen för SlopStaion 3 är borta"
     ],
     "PossibleNextLocations": [
       "Kirkan",
       "Torget"
+    ],
+    "Enemies": [
+      "Gibbaren"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Boulogner parken",
+    "Descriptions": [
+      "I parken kunde man se alrossar i sjön",
+      "Du minns hur din farfar beskrev hur sjön var var artificiellt gjord",
+      "Han sa att han blev nollad i den här parken",
+      "Han nämnde inget om valrossarna dock"
+    ],
+    "PossibleNextLocations": [
+      "Högskolan",
+      "KB"
+    ],
+    "Enemies": [
+      "Valross"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Högskolan",
+    "Descriptions": [
+      "Du är äntligen framme vid högskolan"
+    ],
+    "PossibleNextLocations": [
+      "Högskolan",
+      "KB"
+    ],
+    "Enemies": [
+      "Valross"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "KB",
+    "Descriptions": [
+      "Dags att dricka"
+    ],
+    "PossibleNextLocations": [
+      "Sittning",
+      "KB"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Sittning",
+    "Descriptions": [
+      "Dags att dricka"
+    ],
+    "PossibleNextLocations": [
+      "Boulogner parken"
     ],
     "Enemies": [],
     "KeyItem": ""

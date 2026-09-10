@@ -2,7 +2,7 @@ class Player : FigthableEntity
 {
     public Player()
     {
-        { Hp = 230; Damage = 67; Defense = 67; StealChance = 67; }
+        { Hp = 300; Damage = 15; Defense = 10; StealChance = 67; }
 
         SetName();
         Console.WriteLine("hej " + Name);

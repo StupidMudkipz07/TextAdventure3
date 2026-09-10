@@ -3,7 +3,7 @@
     "Name": "Anton",
     "Description": "Basic fiende i AdolfKirkKöping",
     "Hp": 100,
-    "Damage": 6,
+    "Damage": 10,
     "Defense": 4,
     "StealChance": 34,
     "savedInventory": [
@@ -14,7 +14,7 @@
     "Name": "Buffe tjuv",
     "Description": "Denna varelse har käkat all buffe på hemkirk",
     "Hp": 100,
-    "Damage": 70,
+    "Damage": 10,
     "Defense": 40,
     "StealChance": 80,
     "savedInventory": [
@@ -47,7 +47,7 @@
     "Name": "Gibbaren",
     "Description": "Han sloppar sin kirk varje dag på xboy",
     "Hp": 150,
-    "Damage": 40,
+    "Damage": 20,
     "Defense": 1,
     "StealChance": 80,
     "savedInventory": [
@@ -56,7 +56,7 @@
   },
   {
     "Name": "KirkDonalds employee",
-    "Description": "KirkDonalds",
+    "Description": "Hon ser trött ut efter att ha jobbat på KirkDonalds i 5 min sträck",
     "Hp": 30,
     "Damage": 1,
     "Defense": 60,
@@ -65,6 +65,17 @@
       "Kirk juice",
       "Kirk juice",
       "Kirk juice"
+    ]
+  },
+
+  {
+    "Name": "Valross",
+    "Description": "Denna Valross letar fortfarande efter badkaret på boten av sjön",
+    "Hp": 150,
+    "Damage": 7,
+    "Defense": 14,
+    "StealChance": 80,
+    "savedInventory": [
     ]
   },
   {
