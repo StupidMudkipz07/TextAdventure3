@@ -76,6 +76,9 @@ class Fight
 			case 4:
 				user.Inspect(target);
 				break;
+			case 5:
+				user.Trade(target);
+				break;
 			default:
 				break;
 		}
@@ -90,10 +93,10 @@ class Fight
 	int PlayerChoice()
 	{
 		Console.WriteLine("Välj en av de följade.");
-		Console.WriteLine("1: Attack\n2: Defend\n3. Steal\n4: Inspect");
+		Console.WriteLine("1: Attack\n2: Defend\n3. Steal\n4: Inspect\n5: Trade");
 		Console.Write("Val: ");
 
-		return S.GetIntFromConsole(1, 4);
+		return S.GetIntFromConsole(1, 5);
 	}
 
 	void RunFight(FigthableEntity player, FigthableEntity opponent)

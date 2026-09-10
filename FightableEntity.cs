@@ -1,3 +1,5 @@
+using System.Security.AccessControl;
+
 abstract class FigthableEntity
 {
 	[JsonInclude] public string Name;
@@ -23,6 +25,45 @@ abstract class FigthableEntity
 			totalDamage += Damage - target.Defense;
 
 		target.Hp -= totalDamage;
+	}
+
+	public void Trade(FigthableEntity target)
+	{
+		Console.WriteLine($"{Name} is trading with {target.Name}. {target.Name} can't refuse.");
+
+		Console.ReadKey();
+		if (target.inventory.Count < 1)
+		{
+			Console.WriteLine("No items to trade!");
+			return;
+		}
+
+		Console.WriteLine($"{Name}s invetory:");
+		Console.WriteLine(S.ListToString(inventory));
+		Console.WriteLine($"{target.Name}s invetory:");
+		Console.WriteLine(S.ListToString(target.inventory));
+
+		int playerItemIndex = TradeSelectItem();
+		int targetIntemIndex = TradeSelectItem(target);
+
+		target.inventory.Add(inventory[playerItemIndex]);
+		Console.WriteLine($"{Name} gave {inventory[playerItemIndex].Name} to {target.Name}");
+		inventory.RemoveAt(playerItemIndex);
+
+		inventory.Add(target.inventory[targetIntemIndex]);
+		Console.WriteLine($"{target.Name} gave {target.inventory[playerItemIndex].Name} to {Name}");
+		target.inventory.RemoveAt(targetIntemIndex);
+	}
+
+	private int TradeSelectItem()
+	{
+		Console.WriteLine($"Chose {Name}s item to tacke:");
+		return S.GetIntFromConsole(1, inventory.Count) - 1;
+	}
+	private int TradeSelectItem(FigthableEntity target)
+	{
+		Console.WriteLine($"Chose {target.Name}s item to tacke:");
+		return S.GetIntFromConsole(1, target.inventory.Count) - 1;
 	}
 
 	public void Steal(FigthableEntity target, int stealChance)
