@@ -162,7 +162,7 @@
   {
     "Name": "Boulogner parken",
     "Descriptions": [
-      "I parken kunde man se alrossar i sjön",
+      "I parken kunde man se valrossar i sjön",
       "Du minns hur din farfar beskrev hur sjön var var artificiellt gjord",
       "Han sa att han blev nollad i den här parken",
       "Han nämnde inget om valrossarna dock"
@@ -182,12 +182,11 @@
       "Du är äntligen framme vid högskolan"
     ],
     "PossibleNextLocations": [
-      "Högskolan",
-      "KB"
+      "Datorsalen",
+      "KB",
+      "Klocktornet"
     ],
-    "Enemies": [
-      "Valross"
-    ],
+    "Enemies": [],
     "KeyItem": ""
   },
   {
@@ -197,7 +196,7 @@
     ],
     "PossibleNextLocations": [
       "Sittning",
-      "KB"
+      "Boulogner parken"
     ],
     "Enemies": [],
     "KeyItem": ""
@@ -205,12 +204,24 @@
   {
     "Name": "Sittning",
     "Descriptions": [
-      "Dags att dricka"
+      "Du har druckit några öl för mycket",
+      "Du är så full att du går till parken utan att vara medveten om det"
     ],
     "PossibleNextLocations": [
       "Boulogner parken"
     ],
     "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Klocktornet",
+    "Descriptions": [
+      "DU kollar på klockan för att se vad tiden är, men där är fast vid 11 över 9"
+    ],
+    "PossibleNextLocations": [
+      "Högskolan"
+    ],
+    "Enemies": ["Mathias Alzate"],
     "KeyItem": ""
   }
 ]
