@@ -221,7 +221,9 @@
     "PossibleNextLocations": [
       "Högskolan"
     ],
-    "Enemies": [],
+    "Enemies": [
+      "Mathias Alzate"
+    ],
     "KeyItem": ""
   }
 ]
