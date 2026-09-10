@@ -51,7 +51,8 @@
       "Det stinkar avlopp här nere"
     ],
     "PossibleNextLocations": [
-      "Djupare kloaker"
+      "Djupare kloaker",
+      "Torget"
     ],
     "Enemies": [
       "kloak råtta"
@@ -66,13 +67,45 @@
       "du fortsätter in i kloakerna"
     ],
     "PossibleNextLocations": [
-      "Torget"
+      "Kirkan",
+      "ännu djupare kloaker"
     ],
     "Enemies": [
       "kloakigare råtta"
     ],
     "KeyItem": "kloak nyckel"
   },
+  {
+    "Name": "ännu djupare kloaker",
+    "Descriptions": [
+      "Du stoppar in kloak nyckeln i kloaklåset",
+      "kloakdörren öppnas och en förfärlig stank väller över dig",
+      "du har nu vant vid lukten och undrar om varför någon satte upp två dörrar i kloakerna"
+    ],
+    "PossibleNextLocations": [
+      "KirkDonalds"
+    ],
+    "Enemies": [],
+    "KeyItem": "kloak nyckel"
+  },
+  {
+    "Name": "KirkDonalds",
+    "Descriptions": [
+      "Du beställer KirkDonalds burgaren at 3AM med en färsk kirkjuice",
+      "Det smakade som...",
+      "",
+      "..."
+    ],
+    "PossibleNextLocations": [
+      "Kirkan",
+      "Boulogner parken"
+    ],
+    "Enemies": [
+      "KirkDonalds employee"
+    ],
+    "KeyItem": ""
+  },
+
   {
     "Name": "Hemkirk",
     "Descriptions": [
@@ -102,7 +135,8 @@
     ],
     "PossibleNextLocations": [
       "Commerce",
-      "Boulogner parken"
+      "Boulogner parken",
+      "Torget"
     ],
     "Enemies": [],
     "KeyItem": ""

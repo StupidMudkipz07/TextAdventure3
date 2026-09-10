@@ -58,13 +58,12 @@
     ],
     "KeyItem": ""
   },
-    {
+  {
     "Name": "Djupare kloaker",
     "Descriptions": [
-      "Du öppnar ett brunnslock",
-      "Det finns en stege som leder rakt ner i kloaktunnlarna",
-      "Du bestämmer för att gå ner",
-      "Det stinkar avlopp här nere"
+      "Du stoppar in kloak nyckeln i kloaklåset",
+      "kloakdörren öppnas och en förfärlig stank väller över dig",
+      "du fortsätter in i kloakerna"
     ],
     "PossibleNextLocations": [
       "Torget"
