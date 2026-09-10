@@ -34,7 +34,13 @@ abstract class FigthableEntity
 		Console.ReadKey();
 		if (target.inventory.Count < 1)
 		{
-			Console.WriteLine("No items to trade!");
+			Console.WriteLine($"{target.Name} has no items to trade!");
+			return;
+		}
+
+		if (inventory.Count < 1)
+		{
+			Console.WriteLine($"{Name} has no items to trade!");
 			return;
 		}
 
