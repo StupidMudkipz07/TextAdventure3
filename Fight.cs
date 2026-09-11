@@ -25,6 +25,7 @@ class Fight
 		}
 		else//target överlever
 		{
+
 			target.ResetDefend();
 			return false;
 		}
@@ -105,10 +106,24 @@ class Fight
 		{
 			Console.ReadKey();
 			turn++;
+
+			if (turn > 12)
+			{
+				player.DamageScale++;
+				opponent.DamageScale++;
+				// skriv något så de fattar att gör mer damage efter denna punkt
+				System.Console.WriteLine("The winds of determination power you and your opponent up!");
+			}
+			else
+			{
+				player.DamageScale = 1;
+				opponent.DamageScale = 1;
+			}
 			Console.WriteLine("\nturn: " + turn);
 			PrintHp(player, opponent);
 
 			FightAct(player, opponent, PlayerChoice());
+
 			if (opponent.Hp > 0) //sluta fighten om fienden dör
 			{
 				Console.ReadKey();
@@ -125,8 +140,6 @@ class Fight
 			Environment.Exit(0);
 		}
 	}
-
-
 
 	public void ExecuteFight()
 	{

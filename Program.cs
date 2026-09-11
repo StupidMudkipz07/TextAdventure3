@@ -1,4 +1,6 @@
 ﻿global using System.Text.Json.Serialization;
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+
 Console.Clear();
 // slop dialogue
 {
@@ -13,7 +15,7 @@ Console.Clear();
     System.Console.WriteLine("Det är du som är den viktiga nu!"); Console.ReadKey();
 }
 //världens mest läsbara kod här!!!!!!
-LocationManager locationManager = new(new(), new(new()), "Bussen");
+LocationManager locationManager = new(new(), new(new()), "Datorsalen");
 
 locationManager.PlayRealGAMEOMMG();
 

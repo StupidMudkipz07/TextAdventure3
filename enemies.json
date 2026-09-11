@@ -2,9 +2,9 @@
   {
     "Name": "Anton",
     "Description": "Basic fiende i AdolfKirkKöping",
-    "Hp": 100,
-    "Damage": 10,
-    "Defense": 4,
+    "Hp": 60,
+    "Damage": 14,
+    "Defense": 5,
     "StealChance": 34,
     "savedInventory": [
       "ovve"
@@ -13,21 +13,21 @@
   {
     "Name": "Buffe tjuv",
     "Description": "Denna varelse har käkat all buffe på hemkirk",
-    "Hp": 100,
+    "Hp": 70,
     "Damage": 10,
-    "Defense": 40,
+    "Defense": 6,
     "StealChance": 80,
     "savedInventory": [
       "buffe",
-      "Pocket Mathias"
+      "klocka"
     ]
   },
   {
     "Name": "kloak råtta",
     "Description": "springer avloppet varje år",
-    "Hp": 100,
-    "Damage": 20,
-    "Defense": 20,
+    "Hp": 40,
+    "Damage": 9,
+    "Defense": 14,
     "StealChance": 25,
     "savedInventory": [
       "kloak nyckel"
@@ -36,9 +36,9 @@
   {
     "Name": "kloakigare råtta",
     "Description": "springer bara avloppet varannat år",
-    "Hp": 150,
+    "Hp": 45,
     "Damage": 12,
-    "Defense": 20,
+    "Defense": 14,
     "StealChance": 45,
     "savedInventory": [
       "kloak nyckel"
@@ -48,11 +48,12 @@
     "Name": "Gibbaren",
     "Description": "Han sloppar sin kirk varje dag på xboy",
     "Hp": 150,
-    "Damage": 20,
-    "Defense": 1,
+    "Damage": 12,
+    "Defense": 0,
     "StealChance": 80,
     "savedInventory": [
-      "Monster Kirker 3 Tri"
+      "Monster Kirker 3 Tri",
+      "klocka"
     ]
   },
   {
@@ -72,16 +73,28 @@
     "Name": "Valross",
     "Description": "Denna Valross letar fortfarande efter badkaret på boten av sjön",
     "Hp": 150,
-    "Damage": 7,
+    "Damage": 6,
     "Defense": 14,
     "StealChance": 80,
     "savedInventory": []
   },
   {
+    "Name": "Cissi",
+    "Description": "Du önskade att",
+    "Hp": 6,
+    "Damage": 67,
+    "Defense": 67,
+    "StealChance": 80,
+    "savedInventory": [
+      "linux",
+      "Kirk juice"
+    ]
+  },
+  {
     "Name": "Mathias Alzate",
-    "Description": "Den legendariska AMathis Alzate behöver inte beskrivas",
+    "Description": "Den legendariska Mathias Alzate behöver inte beskrivas",
     "Hp": 1000,
-    "Damage": 1,
+    "Damage": -30,
     "Defense": 1,
     "StealChance": 14,
     "savedInventory": [
@@ -114,6 +127,31 @@
       "Pocket Mathias",
       "Pocket Mathias",
       "Pocket Mathias"
+    ]
+  },
+  {
+    "Name": "adolf kirikington",
+    "Description": "Brutte tror han är Adolf Kirk, brutte trodde han var sigma! Nu är det slut med ditt larpande eller vad ungdomar säger nuförtiden, jag har inte sett filmen",
+    "Hp": 69,
+    "Damage": 69,
+    "Defense": 20,
+    "StealChance": 13,
+    "savedInventory": [
+      "Oskar Sia",
+      "Oskar Sia"
+    ]
+  },
+  {
+    "Name": "webbreklam",
+    "Description": "Du glömde sätta på adblocker! Det går inte att trycka på krysset det är för litet  XD",
+    "Hp": 20,
+    "Damage": 20,
+    "Defense": 20,
+    "StealChance": 90,
+    "savedInventory": [
+      "reklam",
+      "reklam",
+      "reklam"
     ]
   },
   {

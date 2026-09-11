@@ -1,5 +1,9 @@
 class AdolfKirkKöpingResidents : FigthableEntity
 {
+    public AdolfKirkKöpingResidents()
+    {
+    }
+
     public void PrintEnemy()
     {
         Console.WriteLine(Name);

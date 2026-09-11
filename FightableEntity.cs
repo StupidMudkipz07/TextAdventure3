@@ -1,29 +1,95 @@
-using System.Runtime.CompilerServices;
-using System.Security.AccessControl;
-
 abstract class FigthableEntity
 {
 	[JsonInclude] public string Name;
 	[JsonInclude] public string Description;
 	[JsonInclude] public int Hp;
-	[JsonInclude] public int Damage;
-	[JsonInclude] public int Defense;
+	[JsonInclude] public float Damage;
+	[JsonInclude] public float Defense;
 	[JsonInclude] public int StealChance;
 	[JsonInclude] public List<string> savedInventory;
 
 	public int totalDamage;
 	public bool IsDefending;
 	public List<Item> inventory = new();
+	public int DamageScale = 1;
+
+	int GetItemDefenseSum()
+	{
+		int sum = 0;
+		foreach (Item item in inventory)
+		{
+			sum += item.DefenseBuff;
+		}
+		return sum;
+	}
+
+	int GetItemDamageSum()
+	{
+		int sum = 0;
+		foreach (Item item in inventory)
+		{
+			sum += item.DamageBuff;
+		}
+		return sum;
+	}
 
 	//incombat options
 	public void Attack(FigthableEntity target)
 	{
 		totalDamage = 0;
 
-		if (target.Defense >= Damage)
-			totalDamage = 1;
-		else
-			totalDamage += Damage - target.Defense;
+		float targetDefense = target.Defense;
+		float userDamage = Damage;
+
+		System.Console.WriteLine("userATK: " + userDamage);
+		System.Console.WriteLine("targetDEF: " + targetDefense);
+
+		// apply item buffs
+		targetDefense += target.GetItemDefenseSum();
+		userDamage += GetItemDamageSum();
+
+		System.Console.WriteLine("efter items");
+		System.Console.WriteLine("userATK: " + userDamage);
+		System.Console.WriteLine("targetDEF: " + targetDefense);
+
+		//apply block
+		if (target.IsDefending) targetDefense *= 4;
+		System.Console.WriteLine("efter block");
+		System.Console.WriteLine("targetDEF: " + targetDefense);
+
+		// damage roll för slop
+		Random DamageRoll = new Random();
+		int slop = DamageRoll.Next(5, 9);
+
+		userDamage += slop;
+
+		System.Console.WriteLine("efter damage roll");
+		System.Console.WriteLine("userATK: " + userDamage);
+
+		//inget får divideras med noll
+		userDamage = Math.Max(1, userDamage);
+		targetDefense = Math.Max(1, targetDefense);
+
+		System.Console.WriteLine("efter noll prevention");
+		System.Console.WriteLine("userATK: " + userDamage);
+		System.Console.WriteLine("targetDEF: " + targetDefense);
+
+		float sumDamage = userDamage - targetDefense / 2;
+		float multipliedDamage = Math.Max(1, userDamage / targetDefense);
+		System.Console.WriteLine("sum: " + sumDamage);
+		System.Console.WriteLine("mult: " + multipliedDamage);
+		System.Console.WriteLine("damageScale " + DamageScale);
+
+		//calculate damage
+		totalDamage = Math.Max(1, (int)MathF.Round(sumDamage + DamageScale * multipliedDamage));
+
+		System.Console.WriteLine("total");
+		System.Console.WriteLine(totalDamage);
+		target.ResetDefend();
+
+		//in case om det andra inte funkar
+		//totalDamage = (int)MathF.Round(userDamage - targetDefense);
+		//totalDamage = Math.Max(1, totalDamage);
 
 		target.Hp -= totalDamage;
 	}
@@ -56,7 +122,7 @@ abstract class FigthableEntity
 	}
 
 	/// <summary>
-	/// Writes the inventory for traidning.
+	/// Writes the inventory for traiding.
 	/// </summary>
 	private void WriteTradableItems()
 	{
@@ -73,7 +139,7 @@ abstract class FigthableEntity
 		Console.WriteLine($"Choose {Name}s item to give:");
 
 		// Returns the index for the selected item.
-		return S.GetIntFromConsole(1, inventory.Count) - 1; 
+		return S.GetIntFromConsole(1, inventory.Count) - 1;
 	}
 
 	/// <summary>
@@ -130,7 +196,6 @@ abstract class FigthableEntity
 	public void Defend()
 	{
 		System.Console.WriteLine($"{Name} braced for impact");
-		Defense *= 2;
 		IsDefending = true;
 	}
 
@@ -151,11 +216,8 @@ abstract class FigthableEntity
 	{
 		if (IsDefending)
 		{
-			Defense /= 2;
+			System.Console.WriteLine($"{Name} took the hit with ease");
 			IsDefending = false;
 		}
 	}
-
-
-
 }

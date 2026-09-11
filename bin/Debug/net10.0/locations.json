@@ -184,7 +184,8 @@
     "PossibleNextLocations": [
       "Datorsalen",
       "KB",
-      "Klocktornet"
+      "Klocktornet",
+      "Biblioteket"
     ],
     "Enemies": [],
     "KeyItem": ""
@@ -224,6 +225,108 @@
     "Enemies": [
       "Mathias Alzate"
     ],
-    "KeyItem": "Pocket Mathias"
+    "KeyItem": "klocka"
+  },
+  {
+    "Name": "Datorsalen",
+    "Descriptions": [
+      "Du öppnar datorsalen och ser en att alla skärmar förutom en är borta",
+      "Du går närmare och kollar på den",
+      "Den är signerad med din farfars namn",
+      "Detta måste varit din farfar plats i datorsalen",
+      "Du testar att starta datorn",
+      "Den launchar ArchdolfKirkOS!",
+      "Det är bara arch med preinstalled Desktop enviroment"
+    ],
+    "PossibleNextLocations": [
+      "Söka på webben!"
+    ],
+    "Enemies": [
+      "Cissi"
+    ],
+    "KeyItem": "passerkort"
+  },
+  {
+    "Name": "Söka på webben!",
+    "Descriptions": [
+      "Du öppnar AdolfBrowsern",
+      "Hela internet är öppet får dig nu!",
+      "Vad ska man söka på?",
+      "Det finns ju så många val",
+      "...",
+      "meanwhile adolfkirikington:"
+    ],
+    "PossibleNextLocations": [
+      "Smutje.se",
+      "Slap City,com",
+      "Calles cyberspace"
+    ],
+    "Enemies": [
+      "adolf kirikington"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Smutje.se",
+    "Descriptions": [
+      "Här kan du lära dig allt om Karim Rydes äventyr med NF351!",
+      "Båtigt värre!",
+      "oKej nu räcker det med NTI brainrot",
+      "De där dagarna kommer aldrig att komma tillbaks igen!"
+    ],
+    "PossibleNextLocations": [
+      "Datorsalen",
+      "Slap City,com",
+      "Calles cyberspace"
+    ],
+    "Enemies": [
+      "webbreklam"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Calles cyberspace",
+    "Descriptions": [
+      "Inge mer nti brainrutt"
+    ],
+    "PossibleNextLocations": [
+      "Datorsalen",
+      "Slap City,com",
+      "Smutje.se"
+    ],
+    "Enemies": [
+      "webbreklam"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Slap City,com",
+    "Descriptions": [
+      "Inge mer nti brainrutt"
+    ],
+    "PossibleNextLocations": [
+      "Datorsalen",
+      "Calles cyberspace",
+      "Smutje.se"
+    ],
+    "Enemies": [
+      "webbreklam"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Biblioteket",
+    "Descriptions": [
+      ""
+    ],
+    "PossibleNextLocations": [
+      "Datorsalen",
+      "Slap City,com",
+      "Calles cyberspace"
+    ],
+    "Enemies": [
+      "adolf kirikington"
+    ],
+    "KeyItem": "passerkort"
   }
 ]
