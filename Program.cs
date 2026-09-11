@@ -15,7 +15,7 @@ Console.Clear();
     System.Console.WriteLine("Det är du som är den viktiga nu!"); Console.ReadKey();
 }
 //världens mest läsbara kod här!!!!!!
-LocationManager locationManager = new(new(), new(new()), "Datorsalen");
+LocationManager locationManager = new(new(), new(new()), "Bussen");
 
 locationManager.PlayRealGAMEOMMG();
 

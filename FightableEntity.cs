@@ -36,26 +36,23 @@ abstract class FigthableEntity
 	//incombat options
 	public void Attack(FigthableEntity target)
 	{
-		totalDamage = 0;
-
 		float targetDefense = target.Defense;
 		float userDamage = Damage;
 
-		System.Console.WriteLine("userATK: " + userDamage);
-		System.Console.WriteLine("targetDEF: " + targetDefense);
+		if (S.debug) { System.Console.WriteLine("userATK: " + userDamage); System.Console.WriteLine("targetDEF: " + targetDefense); }
+
+
 
 		// apply item buffs
 		targetDefense += target.GetItemDefenseSum();
 		userDamage += GetItemDamageSum();
 
-		System.Console.WriteLine("efter items");
-		System.Console.WriteLine("userATK: " + userDamage);
-		System.Console.WriteLine("targetDEF: " + targetDefense);
+		if (S.debug) { System.Console.WriteLine("efter items"); System.Console.WriteLine("userATK: " + userDamage); System.Console.WriteLine("targetDEF: " + targetDefense); }
 
 		//apply block
 		if (target.IsDefending) targetDefense *= 4;
-		System.Console.WriteLine("efter block");
-		System.Console.WriteLine("targetDEF: " + targetDefense);
+
+		if (S.debug) { System.Console.WriteLine("efter block"); System.Console.WriteLine("targetDEF: " + targetDefense); }
 
 		// damage roll för slop
 		Random DamageRoll = new Random();
@@ -63,28 +60,28 @@ abstract class FigthableEntity
 
 		userDamage += slop;
 
-		System.Console.WriteLine("efter damage roll");
-		System.Console.WriteLine("userATK: " + userDamage);
+		if (S.debug) { System.Console.WriteLine("efter damage roll"); System.Console.WriteLine("userATK: " + userDamage); }
 
 		//inget får divideras med noll
 		userDamage = Math.Max(1, userDamage);
 		targetDefense = Math.Max(1, targetDefense);
 
-		System.Console.WriteLine("efter noll prevention");
-		System.Console.WriteLine("userATK: " + userDamage);
-		System.Console.WriteLine("targetDEF: " + targetDefense);
+		if (S.debug)
+		{
+			System.Console.WriteLine("efter noll prevention");
+			System.Console.WriteLine("userATK: " + userDamage);
+			System.Console.WriteLine("targetDEF: " + targetDefense);
+		}
 
 		float sumDamage = userDamage - targetDefense / 2;
 		float multipliedDamage = Math.Max(1, userDamage / targetDefense);
-		System.Console.WriteLine("sum: " + sumDamage);
-		System.Console.WriteLine("mult: " + multipliedDamage);
-		System.Console.WriteLine("damageScale " + DamageScale);
+		if (S.debug) { System.Console.WriteLine("sum: " + sumDamage); System.Console.WriteLine("mult: " + multipliedDamage); System.Console.WriteLine("damageScale " + DamageScale); }
 
 		//calculate damage
-		totalDamage = Math.Max(1, (int)MathF.Round(sumDamage + DamageScale * multipliedDamage));
+		float realTotal = sumDamage + DamageScale * multipliedDamage;
+		if (S.debug) { System.Console.WriteLine("total"); System.Console.WriteLine(realTotal); }
 
-		System.Console.WriteLine("total");
-		System.Console.WriteLine(totalDamage);
+		totalDamage = Math.Max(1, (int)Math.Abs(realTotal));
 		target.ResetDefend();
 
 		//in case om det andra inte funkar
