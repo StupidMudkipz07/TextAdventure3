@@ -2,7 +2,6 @@ class ItemManager
 {
     public string resourceFilePath = "Items.json";
     public Dictionary<string, Item> AllItems = new();
-
     List<Item> LoadItems(string filePath)
     {
         string data = File.ReadAllText(filePath);
@@ -17,7 +16,7 @@ class ItemManager
         {
             AllItems.Add(item.Name, item);
             //debug bullshit
-            //item.PrintItem();
+            if(S.debug){item.PrintItem();}
         }
     }
 

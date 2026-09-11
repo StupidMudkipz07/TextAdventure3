@@ -74,7 +74,7 @@ class LocationManager
 
     void PlayLocation(Location location)
     {
-        Console.Clear(); //Removed cuz you cant see item requierment text.
+        if (!S.debug) Console.Clear(); //Removed cuz you cant see item requierment text.
 
         //läs upp all text för stället
         ReadLocationText(location);
@@ -97,7 +97,11 @@ class LocationManager
     // load locations to a list
     List<Location> LoadLocations(string filePath)
     {
-        string data = File.ReadAllText(filePath);
+
+        string data;
+
+        if (S.Testing == true) data = File.ReadAllText(S.TestFilePath);
+        else data = File.ReadAllText(filePath);
 
         var loadedLocations = JsonSerializer.Deserialize<List<Location>>(data, new JsonSerializerOptions { IncludeFields = true }) ?? [];
 
@@ -119,7 +123,7 @@ class LocationManager
             locationsOfAdolfKirkKöping.Add(location.Name, location);
 
             //debug bullshit
-            //location.PrintLocation();
+            if (S.debug) { location.PrintLocation(); }
         }
     }
 

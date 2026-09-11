@@ -30,7 +30,7 @@ class FightManager
             allEnemies.Add(enemy.Name, enemy);
             FillItemListFromString(enemy);
             //debug bullshit
-            //enemy.PrintEnemy();
+            if (S.debug) { enemy.PrintEnemy(); }
         }
 
     }

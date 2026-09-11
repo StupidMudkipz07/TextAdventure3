@@ -41,8 +41,6 @@ abstract class FigthableEntity
 
 		if (S.debug) { System.Console.WriteLine("userATK: " + userDamage); System.Console.WriteLine("targetDEF: " + targetDefense); }
 
-
-
 		// apply item buffs
 		targetDefense += target.GetItemDefenseSum();
 		userDamage += GetItemDamageSum();
@@ -81,7 +79,7 @@ abstract class FigthableEntity
 		float realTotal = sumDamage + DamageScale * multipliedDamage;
 		if (S.debug) { System.Console.WriteLine("total"); System.Console.WriteLine(realTotal); }
 
-		totalDamage = Math.Max(1, (int)Math.Abs(realTotal));
+		totalDamage = Math.Max(1, (int)MathF.Round(realTotal));
 		target.ResetDefend();
 
 		//in case om det andra inte funkar

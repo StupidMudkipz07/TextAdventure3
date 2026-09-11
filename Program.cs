@@ -14,8 +14,16 @@ Console.Clear();
     System.Console.WriteLine("Det är inte jag som är huvudpersonen av denna berättelse"); Console.ReadKey();
     System.Console.WriteLine("Det är du som är den viktiga nu!"); Console.ReadKey();
 }
+
+// Enables debugging 
+S.debug = false;
+
+// Sets the player in the testing enviroment
+// This let the player try all features of the game
+S.Testing = true;
+
 //världens mest läsbara kod här!!!!!!
-LocationManager locationManager = new(new(), new(new()), "Bussen");
+LocationManager locationManager = new(new(){}, new(new()), "Bussen");
 
 locationManager.PlayRealGAMEOMMG();
 

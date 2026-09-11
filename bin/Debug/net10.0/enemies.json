@@ -57,16 +57,82 @@
     ]
   },
   {
+    "Name": "Arga bokklubben",
+    "Description": "",
+    "Hp": 267,
+    "Damage": 3,
+    "Defense": 3,
+    "StealChance": 61,
+    "savedInventory": [
+      "Dr Glas"
+    ]
+  },
+  {
+    "Name": "Mikael Ordin",
+    "Description": "Mikael sa b-ordet",
+    "Hp": 100,
+    "Damage": 30,
+    "Defense": 50,
+    "StealChance": 61,
+    "savedInventory": [
+      "Adolf Kirk A3 arket [fake!!!!111]",
+      "Adolf Kirk A3 arket [fake!!!!111]",
+      "Adolf Kirk A3 arket [fake!!!!111]",
+      "Adolf Kirk A3 arket [fake!!!!111]",
+      "Adolf Kirk A3 arket [fake!!!!111]",
+      "Adolf Kirk A4 arket",
+      "Adolf Kirk A3 arket [fake!!!!111]",
+      "Adolf Kirk A3 arket [fake!!!!111]",
+      "Adolf Kirk A3 arket [fake!!!!111]",
+      "Adolf Kirk A3 arket [fake!!!!111]",
+      "Adolf Kirk A3 arket [fake!!!!111]",
+      "Adolf Kirk A3 arket [fake!!!!111]"
+    ]
+  },
+  {
+    "Name": "Subbaren",
+    "Description": "Han sloppar sin kirk varje dag på subkirk",
+    "Hp": 150,
+    "Damage": 5,
+    "Defense": 56,
+    "StealChance": 45,
+    "savedInventory": [
+      "subkirk macka",
+      "subkirk macka",
+      "subkirk macka",
+      "subkirk macka",
+      "subkirk macka",
+      "subkirk macka",
+      "subkirk macka",
+      "subkirk macka",
+      "subkirk macka",
+      "subkirk macka",
+      "subkirk macka"
+    ]
+  },
+  {
     "Name": "KirkDonalds employee",
     "Description": "Hon ser trött ut efter att ha jobbat på KirkDonalds i 5 min sträck",
     "Hp": 30,
     "Damage": 1,
     "Defense": 60,
-    "StealChance": 34,
+    "StealChance": 27,
     "savedInventory": [
       "Kirk juice",
       "Kirk juice",
       "Kirk juice"
+    ]
+  },
+  {
+    "Name": "Pastor G hycklare",
+    "Description": "Är han då en hycklare?",
+    "Hp": 150,
+    "Damage": 35,
+    "Defense": 25,
+    "StealChance": 67,
+    "savedInventory": [
+      "klocka",
+      "Pocket Teto"
     ]
   },
   {
@@ -80,10 +146,10 @@
   },
   {
     "Name": "Cissi",
-    "Description": "Du önskade att",
+    "Description": "Programmerare",
     "Hp": 6,
-    "Damage": 67,
-    "Defense": 67,
+    "Damage": 68,
+    "Defense": 68,
     "StealChance": 80,
     "savedInventory": [
       "linux",
@@ -128,6 +194,15 @@
       "Pocket Mathias",
       "Pocket Mathias"
     ]
+  },
+  {
+    "Name": "Kevin Nyman",
+    "Description": "Den här grabben cyklade till upplandsväsby en gång. Han har också åkt till amerika och varit promptengineer. Han har också snott lunchen på viktorrydberg",
+    "Hp": 21,
+    "Damage": 12,
+    "Defense": 420420,
+    "StealChance": 70,
+    "savedInventory": []
   },
   {
     "Name": "adolf kirikington",

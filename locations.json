@@ -136,10 +136,24 @@
     "PossibleNextLocations": [
       "Commerce",
       "Boulogner parken",
+      "Källaren",
       "Torget"
     ],
     "Enemies": [],
     "KeyItem": ""
+  },
+  {
+    "Name": "Källaren",
+    "Descriptions": [
+      "Är han då en hycklare?"
+    ],
+    "PossibleNextLocations": [
+      "Kirkan"
+    ],
+    "Enemies": [
+      "Pastor G hycklare"
+    ],
+    "KeyItem": "hycklarnyckel"
   },
   {
     "Name": "XBOY",
@@ -157,6 +171,78 @@
     "Enemies": [
       "Gibbaren"
     ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Commerce",
+    "Descriptions": [
+      "Du ser en gammal skylt vid ingången till Commerce",
+      "Det står",
+      "\"Största shoppingcentret i Adolf Kirkköping",
+      "Fylld med FANTASTISKA butiker att gå till\""
+    ],
+    "PossibleNextLocations": [
+      "Subkirk",
+      "Kirkabar",
+      "Åhdolfens",
+      "Adolf Burger"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Subkirk",
+    "Descriptions": [
+      "En tom butik förutom en ensam arbetare",
+      "Han käkade upp all Subkirk majonäs",
+      "Han har den sista mackan i hela byggnaden"
+    ],
+    "PossibleNextLocations": [
+      "Commerce"
+    ],
+    "Enemies": [
+      "Subbaren"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Åhdolfens",
+    "Descriptions": [
+      "En klädbutik som bara säljer kläder med Adolf Kirks ansikte på",
+      "Dom är på nästan 100% rea för att ingen vill ha dom",
+      "Den är så full så du vill inte ha den även om den är gratis"
+    ],
+    "PossibleNextLocations": [
+      "Commerce"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Kirkabar",
+    "Descriptions": [
+      "En bar som är helt tom",
+      "Det finns en bartender som sitter och stirrar på dig",
+      "Han säger att han inte har några kunder längre",
+      "Han säger att han inte har några kunder längre",
+      "Han värkar ha fastnat i vinkelvolten"
+    ],
+    "PossibleNextLocations": [
+      "Commerce"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Adolf Burger",
+    "Descriptions": [
+      "En burger restaurang som är helt tom",
+      "Det luktar fruktansvärt här inne, antagligen för alla ruttnande burgare"
+    ],
+    "PossibleNextLocations": [
+      "Commerce"
+    ],
+    "Enemies": [],
     "KeyItem": ""
   },
   {
@@ -352,12 +438,239 @@
     ],
     "PossibleNextLocations": [
       "Bokklubb",
-      "mattebok hyllan",
+      "Högskolan",
       "printer"
+    ],
+    "Enemies": [],
+    "KeyItem": "passerkort"
+  },
+  {
+    "Name": "printer",
+    "Descriptions": [
+      "Du går fram till printer som är täckt med damm",
+      "Du trycker på start knappen och den började skaka",
+      "Efter fem minuter har den printat ut ett helt A4 ark",
+      "Det står: \"legenden om Adolf Kirk\" på den",
+      "Från ingenstans så kommer Mikael Ordin och snor dokumentet från dig"
+    ],
+    "PossibleNextLocations": [
+      "Bokklubb",
+      "Biblioteket"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Bokklubb",
+    "Descriptions": [
+      "Längst bak sitter en grupp personer och har högläsning",
+      "Du går närmare för att höra vad de lyssnar på:",
+      "Jag har aldrig sett en sådan sommar. Rötmånadshetta sedan mitten av maj. Hela dagen står ett tjockt töcken av damm alldeles stilla över gatorna och torgen.",
+      "Först på kvällen lever man upp en smula. Jag tog en aftonpromenad nyss, som jag gör nästan var dag efter mina sjukbesök, och de äro icke många nu på sommaren. Det kommer en sval, jämn luftström från öster, töcknet lyfter, seglar långsamt bort och blir en lång slöja av rött stoft bort i väster.",
+      "Intet skrammel av arbetsåkdon mera, bara en droska då och då, och spårvagnen som ringer. Jag går gatan ner i sakta mak, träffar emellanåt en bekant och står och pratar en stund i ett gathörn.",
+      "Men varför skall jag jämt möta pastor Gregorius? Jag kan inte se den mannen utan att jag kommer att tänka på en anekdot jag en gång i världen hörde om Schopenhauer. ",
+      "Den bistre filosofen satt en kväll i ett hörn i sitt kafé, ensam som vanligt; dörren öppnas och en person med ett osympatiskt utseende stiger in. Schopenhauer betraktar honom med ett ansikte, förvridet av vämjelse och fasa, rusar upp och börjar dunka mannen i huvudet med sin käpp.",
+      "Det var bara med anledning av hans utseende. ",
+      "Du blir uttråkad och går där ifrån",
+      "När ska gå därifrån så råkar du gå in i en hylla ",
+      "Boken Kirkocain trillar ner landar på din fot",
+      "Du utbrister ett skrik av smärta >~<",
+      "Hela boken klubben hörde ditt skrik",
+      "De ser inte glada ut för att du störde deras sago stund"
+    ],
+    "PossibleNextLocations": [
+      "Biblioteket"
+    ],
+    "Enemies": [
+      "Arga bokklubben"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Kirkvägen",
+    "Descriptions": [
+      "Här kan du läsa på om allting!",
+      "Du hittar en bok varför bas sju borde bli nya standarden",
+      "Detta låter som en referens du inte kommer att fatta",
+      "Dumhuvve..."
+    ],
+    "PossibleNextLocations": [
+      "Kloakporten",
+      "Högskolan"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Kloakporten",
+    "Descriptions": [],
+    "PossibleNextLocations": [
+      "Kirkvägen",
+      "Heltvanlig dörr"
+    ],
+    "Enemies": [],
+    "KeyItem": "kloak nyckel"
+  },
+  {
+    "Name": "Heltvanlig dörr",
+    "Descriptions": [],
+    "PossibleNextLocations": [
+      "Adolf Kirks helt vanliga kontor",
+      "\"Meat Grinder\"",
+      "Kloakporten"
     ],
     "Enemies": [
       "adolf kirikington"
     ],
-    "KeyItem": "passerkort"
+    "KeyItem": "subkirk macka"
+  },
+  {
+    "Name": "\"Meat Grinder\"",
+    "Descriptions": [
+      "Två stora köttkvarnar står framför dig",
+      "Du ser en lapp på ena köttkvarnen",
+      "Det står: \"Varning! Denna köttkvarn är inte för de svaga\"",
+      "Du måste välja en köttkvarn att gå in i"
+    ],
+    "PossibleNextLocations": [
+      "Bussen",
+      "Köttkvarnen med lapp på"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Köttkvarnen med lapp på",
+    "Descriptions": [
+      "Fighten här kommer att suga",
+      "Tänk på vad du gör nästa gång du väjer något med nament \"Meat Grinder\""
+    ],
+    "PossibleNextLocations": [
+      "Kirkvägen"
+    ],
+    "Enemies": [
+      "Kevnin Nyman"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Adolf Kirks helt vanliga kontor",
+    "Descriptions": [],
+    "PossibleNextLocations": [
+      "Heltvanlig dörr",
+      "Högskolans Hidden Basement"
+    ],
+    "Enemies": [],
+    "KeyItem": "Dr Glas"
+  },
+  {
+    "Name": "Högskolans Hidden Basement",
+    "Descriptions": [],
+    "PossibleNextLocations": [
+      "Time Machine"
+    ],
+    "Enemies": [],
+    "KeyItem": "Adolf Kirk A4 arket"
+  },
+  {
+    "Name": "Time Machine",
+    "Descriptions": [
+      "En maskin som kan ta dig tillbaka till en tid innan Adolf Kirk tog över Skövde",
+      "Du kan åka tillbaka till 2026 och se hur det var innan Adolf Kirk tog över",
+      "Du kan också åka tillbaka till 2026 och se hur det var innan Adolf Kirk tog över",
+      "Du kan också åka tillbaka till 2026 och se hur det var innan Adolf Kirk tog över",
+      "Du kan också åka tillbaka till 2026 och se hur det var innan Adolf Kirk tog över",
+      "Du kan också åka tillbaka till 2026 och se hur det var innan Adolf Kirk tog över",
+      "Du kan också åka tillbaka till 2026 och se hur det var innan Adolf Kirk tog över",
+      "Du kan också åka tillbaka till 2026 och se hur det var innan Adolf Kirk tog över",
+      "Du kan också åka tillbaka till 2026 och se hur det var innan Adolf Kirk tog över"
+    ],
+    "PossibleNextLocations": [
+      "Åk till Skövde 2026 11/9"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Åk till Skövde 2026 11/9",
+    "Descriptions": [
+      "Du befinner dig i Skövde 2026, en tid innan Adolf Kirk tog över staden"
+    ],
+    "PossibleNextLocations": [
+      "Högskolan i Skövde"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Högskolan i Skövde",
+    "Descriptions": [
+      ""
+    ],
+    "PossibleNextLocations": [
+      "His Bibloteket",
+      "His Datorsalen",
+      "Torget i Skövde"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "His Bibloteket",
+    "Descriptions": [
+      "Ett helt vanligt bibliotek, Ingen Adolf Kirk här inte"
+    ],
+    "PossibleNextLocations": [
+      "Högskolan i Skövde"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "His Datorsalen",
+    "Descriptions": [
+      "Du öppnar datorsalen och ser en att alla skärmar, En är fortfarande på",
+      "Du går närmare och kollar på den",
+      "Den är signerad med din farfars namn",
+      "Detta måste varit din farfar plats i datorsalen",
+      "Du testar att starta datorn",
+      "Den launchar ArchdolfKirkOS!",
+      "Det är bara arch med preinstalled Desktop enviroment",
+      "...",
+      "Kostingt att ArchdolfKirkOS finns på denhär tiden?"
+    ],
+    "PossibleNextLocations": [
+      "Högskolan i Skövde"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+    "Name": "Torget i Skövde",
+    "Descriptions": [
+      "Du går ut på torget och ser att det är helt tomt",
+      "Det finns inga människor här, förutom en man som står och stirrar på dig",
+      "Du känner igen mannen",
+      "...",
+      "...",
+      "Det är din farfar"
+    ],
+    "PossibleNextLocations": [
+      "The End"
+    ],
+    "Enemies": [
+      "Adolf Kirk"
+    ],
+    "KeyItem": ""
+  },
+  {
+    "Name": "The End",
+    "Descriptions": [
+      "Du har besegrat Adolf Kirk och återställt ordningen i Skövde",
+      "Du har nu möjlighet att återvända till din egen tid, eller stanna kvar i 2026 och leva ett liv utan Adolf Kirk"
+    ],
+    "PossibleNextLocations": [],
+    "Enemies": [],
+    "KeyItem": ""
   }
 ]

@@ -4,6 +4,9 @@ static class S
 {
     public static bool debug = false;
 
+    public static bool Testing = false;
+    public static string TestFilePath = "testLocations.json";
+
     public static string ListToString(List<string> list)
     {
         string output = "";

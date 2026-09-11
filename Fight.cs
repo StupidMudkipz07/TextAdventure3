@@ -41,16 +41,19 @@ class Fight
 	void StartFight(FigthableEntity player, FigthableEntity opponent)
 	{
 		Random random = new Random();
-		switch (random.Next(1, 4))
+		switch (random.Next(1, 6))
 		{
 			case 1:
 				System.Console.WriteLine(opponent.Name + " kirkade fram ur skuggorna");
 				break;
 			case 2:
-				System.Console.WriteLine($"{opponent.Name} kirkiade på {player.Name}'s balle");
+				System.Console.WriteLine($"{opponent.Name} kirkade på {player.Name}'s stortå");
 				break;
 			case 3:
 				System.Console.WriteLine($"{opponent.Name} stirrar på {player.Name} med hat i sin blick");
+				break;
+			case 4:
+				System.Console.WriteLine($"{opponent.Name} går fram och slår till {player.Name} på kinden");
 				break;
 			default:
 				System.Console.WriteLine($"{player.Name} isnåg att {opponent.Name}'s båt var större än deras");

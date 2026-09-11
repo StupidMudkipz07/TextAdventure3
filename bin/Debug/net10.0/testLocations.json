@@ -1,0 +1,137 @@
+[{
+   "Name": "Bussen",
+    "Descriptions": [
+     "Nu testar vi på här",
+      "oj vad roligt"
+    ],
+    "PossibleNextLocations": [
+      "Test to steal and trade",
+      "Test to need Item",
+      "Test other locations",
+      "Test item farming",
+      "Test lossing"
+    ],
+    "Enemies": [
+    "Anton"
+    ],
+    "KeyItem": ""
+  },
+  {
+   "Name": "Test to steal and trade",
+    "Descriptions": [
+     "Stealing items gets a random item from your opponents inventory if you succeed the stealchance",
+      "Trading only works if both you and your opponent have items"
+    ],
+    "PossibleNextLocations": [
+      "Bussen"
+    ],
+    "Enemies": [
+    "KirkDonalds employee"
+    ],
+    "KeyItem": ""
+  },
+  {
+   "Name": "Test to need Item",
+    "Descriptions": [
+     "You will need an item to get to the nexr location",
+      "To get that item you will need to steal or trade it from kloak råtta"
+    ],
+    "PossibleNextLocations": [
+      "Place that needs an item",
+      "Bussen"
+    ],
+    "Enemies": [
+      "kloak råtta"
+    ],
+    "KeyItem": ""
+  },
+  {
+   "Name": "Place that needs an item",
+    "Descriptions": [
+     "Hope you got the kloak nyckel from kloak råtta"
+    ],
+    "PossibleNextLocations": [
+      "Bussen"
+    ],
+    "Enemies": [],
+    "KeyItem": "kloak nyckel"
+  },
+  {
+   "Name": "Test other locations",
+    "Descriptions": [
+     "Hear you can test other locations and see how they work"
+    ],
+    "PossibleNextLocations": [
+      "Location 1",
+      "Location 2",
+      "Bussen"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+   "Name": "Location 1",
+    "Descriptions": [
+     "This is location 1"
+    ],
+    "PossibleNextLocations": [
+      "Test other locations"
+    ],
+    "Enemies": [
+      "Buffe tjuv"
+    ],
+    "KeyItem": ""
+  },
+  {
+   "Name": "Location 2",
+    "Descriptions": [
+     "This is location 2"
+    ],
+    "PossibleNextLocations": [
+      "Location 3"
+    ],
+    "Enemies": [
+      "kloakigare råtta"
+    ],
+    "KeyItem": ""
+  },
+  {
+   "Name": "Location 3",
+    "Descriptions": [
+     "This is location 3"
+    ],
+    "PossibleNextLocations": [
+      "Test other locations"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
+   "Name": "Test lossing",
+    "Descriptions": [
+     "Here you can test what happens when you lose a fight"
+    ],
+    "PossibleNextLocations": [
+      "Bussen"
+    ],
+    "Enemies": [
+      "Adolf Kirk"
+    ],
+    "KeyItem": ""
+  },
+  {
+   "Name": "Test item farming",
+    "Descriptions": [
+     "Here you can test how to farm items",
+     "Some items will increse some of your stats by having them in you invetory",
+     "This works for you and your enemies, meaning that stealing will also weaken them"
+    ],
+    "PossibleNextLocations": [
+      "Bussen"
+    ],
+    "Enemies": [
+      "Mathias Alzate"
+    ],
+    "KeyItem": ""
+  }
+]
