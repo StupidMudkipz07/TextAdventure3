@@ -239,7 +239,9 @@
       "Det är bara arch med preinstalled Desktop enviroment"
     ],
     "PossibleNextLocations": [
-      "Söka på webben!"
+      "Söka på webben!",
+      "Högskolan",
+      "börja programmera!"
     ],
     "Enemies": [
       "Cissi"
@@ -267,6 +269,22 @@
     "KeyItem": ""
   },
   {
+    "Name": "börja programmera!",
+    "Descriptions": [
+      "Dags att börja programmera lite XD",
+      "Dags att börja programmera lite XD...",
+      "Hur programmerar man ens?",
+      "Print(Hello world)?",
+      "Schizo ramblnigs en av insane person är allt jag ser"
+    ],
+    "PossibleNextLocations": [
+      "Söka på webben!",
+      "Datorsalen"
+    ],
+    "Enemies": [],
+    "KeyItem": ""
+  },
+  {
     "Name": "Smutje.se",
     "Descriptions": [
       "Här kan du lära dig allt om Karim Rydes äventyr med NF351!",
@@ -287,7 +305,11 @@
   {
     "Name": "Calles cyberspace",
     "Descriptions": [
-      "Inge mer nti brainrutt"
+      "Det finns information om processing java",
+      "Det heter inte void! säger Calle",
+      "Du förstår inte riktigt det skämtet",
+      "Du inser att det finns en hel värld med skämt du aldrig kommer att förstå",
+      ""
     ],
     "PossibleNextLocations": [
       "Datorsalen",
@@ -302,7 +324,13 @@
   {
     "Name": "Slap City,com",
     "Descriptions": [
-      "Inge mer nti brainrutt"
+      "Slap Ciy!!",
+      "Bästa spelet någonsin!",
+      "Gjort i Skövde!",
+      "Favorit karaktär: Ultra Fishbunjin 3000",
+      "han kan bänka 2487 kg",
+      "Det här låter som ett bra spel",
+      "Jag borde testa det här någon gång"
     ],
     "PossibleNextLocations": [
       "Datorsalen",
@@ -317,12 +345,15 @@
   {
     "Name": "Biblioteket",
     "Descriptions": [
-      ""
+      "Här kan du läsa på om allting!",
+      "Du hittar en bok varför bas sju borde bli nya standarden",
+      "Detta låter som en referens du inte kommer att fatta",
+      "Dumhuvve..."
     ],
     "PossibleNextLocations": [
-      "Datorsalen",
-      "Slap City,com",
-      "Calles cyberspace"
+      "Bokklubb",
+      "mattebok hyllan",
+      "printer"
     ],
     "Enemies": [
       "adolf kirikington"

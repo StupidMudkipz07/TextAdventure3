@@ -19,6 +19,6 @@ LocationManager locationManager = new(new(), new(new()), "Datorsalen");
 
 locationManager.PlayRealGAMEOMMG();
 
-//https://www.instagram.com/popular/adolf-kirk/
+//www.instagram.com/popular/adolf-kirk/
 
 Console.ReadLine();

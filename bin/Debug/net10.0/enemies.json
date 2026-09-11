@@ -144,10 +144,10 @@
   {
     "Name": "webbreklam",
     "Description": "Du glömde sätta på adblocker! Det går inte att trycka på krysset det är för litet  XD",
-    "Hp": 6,
-    "Damage": 6,
-    "Defense": 6,
-    "StealChance": 99,
+    "Hp": 20,
+    "Damage": 20,
+    "Defense": 20,
+    "StealChance": 90,
     "savedInventory": [
       "reklam",
       "reklam",
