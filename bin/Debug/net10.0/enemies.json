@@ -146,7 +146,7 @@
   },
   {
     "Name": "Cissi",
-    "Description": "Programmerare",
+    "Description": "Du önskade att hon kunde ta på sig en bunnysuit",
     "Hp": 6,
     "Damage": 68,
     "Defense": 68,
@@ -154,6 +154,28 @@
     "savedInventory": [
       "linux",
       "Kirk juice"
+    ]
+  },
+   {
+    "Name": "Adolf Trossing",
+    "Description": "Du önskade att han kunde ta på sig sina femboy kostym: uWu",
+    "Hp": 67,
+    "Damage": 40,
+    "Defense": 40,
+    "StealChance": 1,
+    "savedInventory": [
+      "passerkort"
+    ]
+  },
+   {
+    "Name": "Den gamla visa mannen",
+    "Description": "Du önskade att han kunde ta på sig sina femboy kostym: uWu",
+    "Hp": 67,
+    "Damage": 40,
+    "Defense": 40,
+    "StealChance": 1,
+    "savedInventory": [
+      "passerkort"
     ]
   },
   {

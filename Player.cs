@@ -2,7 +2,7 @@ class Player : FigthableEntity
 {
     public Player()
     {
-        { Hp = 300; Damage = 444; Defense = 444; StealChance = 100; }
+        { Hp = 300; Damage = 19; Defense = 12; StealChance = 67; }
 
         SetName();
         Console.WriteLine("hej " + Name);
@@ -10,6 +10,14 @@ class Player : FigthableEntity
         SetDescription();
         Console.WriteLine("Idag ska du få höra historien om AdolfKirkKöping!");
         Console.ReadKey();
+    }
+
+
+    //Debug feature
+    public void AddItem(string item, ItemManager itemManager)
+    {
+        inventory.Add(itemManager.AllItems[item]);
+        System.Console.WriteLine($"{item} was added to the players inventory");
     }
 
     void SetName()

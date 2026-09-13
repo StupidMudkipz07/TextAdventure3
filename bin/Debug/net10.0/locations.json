@@ -285,19 +285,22 @@
       "Sittning",
       "Boulogner parken"
     ],
-    "Enemies": [],
+    "Enemies": [ "Adolf Trossing"],
     "KeyItem": ""
   },
   {
     "Name": "Sittning",
     "Descriptions": [
+      "Mathias Alzate filmar Adolf trossing när han tar av sig byxorna╭( ๐_๐)╮",
       "Du har druckit några öl för mycket",
       "Du är så full att du går till parken utan att vara medveten om det"
     ],
     "PossibleNextLocations": [
       "Boulogner parken"
     ],
-    "Enemies": [],
+    "Enemies": [
+     "Den gamla visa mannen"
+    ],
     "KeyItem": ""
   },
   {
