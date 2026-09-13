@@ -526,8 +526,7 @@
       "\"Meat Grinder\"",
       "Kloakporten"
     ],
-    "Enemies": [
-    ],
+    "Enemies": [],
     "KeyItem": "subkirk macka"
   },
   {
@@ -567,7 +566,7 @@
       "På väggen ser du ett nyckelhål",
       "Det är format som en Dr Glas bok",
       "Det kan man nog hitta i biblioteket"
-  ],
+    ],
     "PossibleNextLocations": [
       "Heltvanlig dörr",
       "Högskolans Hidden Basement"
@@ -617,7 +616,10 @@
   {
     "Name": "Högskolan i Skövde",
     "Descriptions": [
-      ""
+      "Du befinner dig på högskolan i Skövde",
+      "Det är fullt med elever överallt",
+      "Alla verkar leva i harmoni",
+      "ok köttig"
     ],
     "PossibleNextLocations": [
       "His Bibloteket",
@@ -630,7 +632,8 @@
   {
     "Name": "His Bibloteket",
     "Descriptions": [
-      "Ett helt vanligt bibliotek, Ingen Adolf Kirk här inte"
+      "Ett helt vanligt bibliotek, Ingen Adolf Kirk här inte",
+      "Bara massa Dr Glas"
     ],
     "PossibleNextLocations": [
       "Högskolan i Skövde"
@@ -649,7 +652,7 @@
       "Den launchar ArchdolfKirkOS!",
       "Det är bara arch med preinstalled Desktop enviroment",
       "...",
-      "Kostingt att ArchdolfKirkOS finns på denhär tiden?"
+      "Kostingt att ArchdolfKirkOS finns på den här tiden?"
     ],
     "PossibleNextLocations": [
       "Högskolan i Skövde"
@@ -678,10 +681,12 @@
   {
     "Name": "The End",
     "Descriptions": [
-      "Du har besegrat Adolf Kirk och återställt ordningen i Skövde",
-      "Du har nu möjlighet att återvända till din egen tid, eller stanna kvar i 2026 och leva ett liv utan Adolf Kirk"
+      "Adolf Kirk gav dig kraften av adolfus kirkus",
+      "Du reser en staty i din ära"
     ],
-    "PossibleNextLocations": [],
+    "PossibleNextLocations": [
+      "The End"
+    ],
     "Enemies": [],
     "KeyItem": ""
   }

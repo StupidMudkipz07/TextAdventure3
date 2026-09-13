@@ -255,7 +255,8 @@
     ],
     "PossibleNextLocations": [
       "Högskolan",
-      "KB"
+      "KB",
+      "KirkDonalds"
     ],
     "Enemies": [
       "Valross"
@@ -271,7 +272,8 @@
       "Datorsalen",
       "KB",
       "Klocktornet",
-      "Biblioteket"
+      "Biblioteket",
+      "Kirkvägen"
     ],
     "Enemies": [],
     "KeyItem": ""
@@ -285,7 +287,9 @@
       "Sittning",
       "Boulogner parken"
     ],
-    "Enemies": [ "Adolf Trossing"],
+    "Enemies": [
+      "Adolf Trossing"
+    ],
     "KeyItem": ""
   },
   {
@@ -299,7 +303,7 @@
       "Boulogner parken"
     ],
     "Enemies": [
-     "Den gamla visa mannen"
+      "Den gamla visa mannen"
     ],
     "KeyItem": ""
   },
@@ -523,7 +527,6 @@
       "Kloakporten"
     ],
     "Enemies": [
-      "adolf kirikington"
     ],
     "KeyItem": "subkirk macka"
   },
@@ -558,7 +561,13 @@
   },
   {
     "Name": "Adolf Kirks helt vanliga kontor",
-    "Descriptions": [],
+    "Descriptions": [
+      "Du öppnar dörren och ser ett helt vanligt kontor",
+      "Det till hör Adolf Kirk",
+      "På väggen ser du ett nyckelhål",
+      "Det är format som en Dr Glas bok",
+      "Det kan man nog hitta i biblioteket"
+  ],
     "PossibleNextLocations": [
       "Heltvanlig dörr",
       "Högskolans Hidden Basement"
