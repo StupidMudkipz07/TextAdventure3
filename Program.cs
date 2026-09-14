@@ -1,4 +1,5 @@
 ﻿global using System.Text.Json.Serialization;
+
 // Enables debugging 
 S.debug = false;
 // Sets the player in the testing enviroment
