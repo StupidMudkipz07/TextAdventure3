@@ -23,12 +23,14 @@ class Player : FigthableEntity
     void SetName()
     {
         Console.WriteLine("Vad är ditt namn?");
+        System.Console.Write("Skriv ditt namn här:");
         Name = Console.ReadLine();
     }
 
     void SetDescription()
     {
         Console.WriteLine("Kan du beskriva dig själv med några ord?");
+        System.Console.Write("Skriv din beskrivning här:");
         Description = Console.ReadLine();
     }
 
